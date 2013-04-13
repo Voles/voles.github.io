@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://Voles.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: tutorial | My Octopress Blog]]></title>
+  <link href="http://Voles.github.io/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://Voles.github.io/"/>
   <updated>2013-04-13T21:31:27+02:00</updated>
   <id>http://Voles.github.io/</id>
@@ -23,7 +23,7 @@
 <p>First we have to create a new project in <strong>Flash Builder</strong>, go to <em>File</em> <strong>→</strong> <em>New</em> <strong>→</strong> <em>ActionScript Project</em>.</p>
 
 <p>You will see a dialog where you can fill in your project details. Fill in your <em>Project name</em> and press the <em>Next</em> button.
-<img class="left" src="http://Voles.github.io/images/posts/project-name.png" title="'Project name'" ></p>
+<img class="left" src="/images/posts/project-name.png" title="'Project name'" ></p>
 
 <p><a href="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/1.-project-name.png"><img class="image" title="Project name" src="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/1.-project-name-150x150.png" alt="Dialog project details" width="150" height="150" /></a></p>
 
@@ -44,7 +44,7 @@
 
 <p>Make a new .fla-file and make a MovieClip with a very basic drawing in it. Go to the properties of the MovieClip.</p>
 
-<p>Tick <em>Export for ActionScript</em> and change the classname (‘Class’) to &#8216;SimpleShape’. You schould have something like this:</p>
+<p>Tick <em>Export for ActionScript</em> and change the classname (‘Class’) to 'SimpleShape’. You schould have something like this:</p>
 
 <p><a href="http://student.devine.be/niels.dequeker/20102011/CMD1/BLOG/2011/setting-up-a-as3-project-with-flash-builder/3-mc-properties" rel="attachment wp-att-395"><img class="size-thumbnail wp-image-395 alignnone" title="MovieClip properties" src="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/3.-mc-properties-150x150.png" alt="Dialog MovieClip properties in Flash IDE" width="150" height="150" /></a></p>
 
@@ -146,7 +146,7 @@ private function preloaderCompleteHandler(event:Event):void
 
 <p>To make this work, we first have to make a second class, I name it ‘Application.as’ and put it in a package named ‘be.devine’.</p>
 
-<p>Again, right click on your Flash Builder project and go to ‘Properties’. In the ‘ActionScript Compiler’-tab, put this in the ‘Additional compiler arguments’: “-frame &#8220;start&#8221; be.devine.Application”. This creates a second frame for your project. You should have this:
+<p>Again, right click on your Flash Builder project and go to ‘Properties’. In the ‘ActionScript Compiler’-tab, put this in the ‘Additional compiler arguments’: “-frame "start" be.devine.Application”. This creates a second frame for your project. You should have this:
 <a href="http://student.devine.be/niels.dequeker/20102011/CMD1/BLOG/2011/setting-up-a-as3-project-with-flash-builder/8-compiler-arguments" rel="attachment wp-att-404"><img class="size-full wp-image-404 alignnone" title="Additional compiler arguments" src="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/8.-compiler-arguments.png" alt="Flash Builder detail additional compiler arguments" width="476" height="61" /></a></p>
 
 <p>Go to your Main.as class and change the superclass to ‘MovieClip’ instead of Sprite. You have to do this because we want multiple frames (one frame for the preloader and a second frame for the application itself) and a Sprite doesn’t have a timeline.</p>
@@ -187,7 +187,7 @@ addChild(application);</pre>
 
 <p>You can download the source files <a title="MyFirstActionscriptProject" href="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/MyFirstActionscriptProject.zip">here</a>.</p>
 
-<p>I hope you learned something from this. Please, do not hesitate to comment with your opinion, doubs, feedback&#8230;@</p>
+<p>I hope you learned something from this. Please, do not hesitate to comment with your opinion, doubs, feedback...@</p>
 ]]></content>
   </entry>
   
