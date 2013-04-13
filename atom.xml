@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://voles.github.io/atom.xml" rel="self"/>
-  <link href="http://voles.github.io/"/>
-  <updated>2013-04-13T20:17:46+02:00</updated>
-  <id>http://voles.github.io/</id>
+  <link href="http://Voles.github.io/atom.xml" rel="self"/>
+  <link href="http://Voles.github.io/"/>
+  <updated>2013-04-13T20:43:51+02:00</updated>
+  <id>http://Voles.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
     
@@ -15,25 +15,23 @@
   
   <entry>
     <title type="html"><![CDATA[Vim cheat sheet]]></title>
-    <link href="http://voles.github.io/blog/2013/04/13/vim-cheat-sheet/"/>
+    <link href="http://Voles.github.io/blog/2013/04/13/vim-cheat-sheet/"/>
     <updated>2013-04-13T20:06:00+02:00</updated>
-    <id>http://voles.github.io/blog/2013/04/13/vim-cheat-sheet</id>
-    <content type="html"><![CDATA[<p>I can&#8217;t get enough of Vim, since I&#8217;ve started using it to configure EC2 instances.
+    <id>http://Voles.github.io/blog/2013/04/13/vim-cheat-sheet</id>
+    <content type="html"><![CDATA[<p>Since I&#8217;ve started using Vim to configure EC2 instances, I can&#8217;t get enough of it.
 This post will be my personal cheat sheet, to document the commands I use on a regular base.</p>
 
 <p>Vim commands:
 * <em>L</em></p>
 
-<pre><code>- go to the start of the current line
+<pre><code>go to the start of the current line
 </code></pre>
 
 <ul>
-<li><em>gg</em>
-
-<ul>
-<li>go to the beginning of the current file</li>
-</ul>
-</li>
+<li><p><em>gg</em>
+  go to the beginning of the current file</p></li>
+<li><p><em>dd</em>
+  remove the current line</p></li>
 </ul>
 
 ]]></content>
@@ -41,9 +39,9 @@ This post will be my personal cheat sheet, to document the commands I use on a r
   
   <entry>
     <title type="html"><![CDATA[Setting up a AS3 project with Flash Builder]]></title>
-    <link href="http://voles.github.io/blog/2013/04/13/setting-up-a-as3-project-with-flash-builder/"/>
+    <link href="http://Voles.github.io/blog/2013/04/13/setting-up-a-as3-project-with-flash-builder/"/>
     <updated>2013-04-13T20:03:00+02:00</updated>
-    <id>http://voles.github.io/blog/2013/04/13/setting-up-a-as3-project-with-flash-builder</id>
+    <id>http://Voles.github.io/blog/2013/04/13/setting-up-a-as3-project-with-flash-builder</id>
     <content type="html"><![CDATA[<h3>Basic setup</h3>
 
 <!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} span.s1 {letter-spacing: 0.0px} -->
