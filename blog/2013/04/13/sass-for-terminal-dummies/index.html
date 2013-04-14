@@ -94,7 +94,7 @@
   </header>
 
 
-<div class="entry-content"><p>A while ago, there were some posts on <a href="http://www.forrst.com" title="Forrst">Forrst</a> about LESS. <a href="http://www.lesscss.org/" title="Less">LESS</a> is a tool, made to add extra functionality to CSS. Until now I only wrote <em>static</em> CSS-files, sometimes with over 500 lines of code. To make the stylesheet more readable, I grouped codeblocks, used comments, added extra indent with tabs, etc.</p>
+<div class="entry-content"><p>A while ago, there were some posts on <a href="http://www.forrst.com" title="Forrst">Forrst</a> about LESS. <a href="http://www.lesscss.org/" title="Less">LESS</a> is a tool, made to add extra functionality to CSS. Until now I only wrote <em>static</em> CSS-files, sometimes with over 1500 lines of code for a simple website. To make the stylesheet more readable, I grouped codeblocks, used comments, added extra indent with tabs, etc.</p>
 
 <p>Splitting up the stylesheet in separate files is also an option to keep everything structured, but that adds a lot of extra HTTP-request.</p>
 
@@ -110,7 +110,9 @@
 
 <h3>Compass</h3>
 
-<p>One of the disadvantages of pure CSS was that if you import other CSS-files, you create extra HTTP-requests. Compass is a framework that makes it possible to compile all your imported CSS-files into one CSS-file. I think there is no reasen why you wouldn’t use Compass if you work with Sass.</p>
+<p>One of the disadvantages of pure CSS was that if you import other CSS-files, you create extra HTTP-requests. Compass is a framework that makes it possible to compile all your imported CSS-files into one CSS-file.</p>
+
+<p>I think there is no reasen why you wouldn’t use Compass if you work with Sass.</p>
 
 <h3>Using Sass</h3>
 
@@ -125,11 +127,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>Make sure that you replace the double quotes with these (&#8220;) when you copy-paste this code. Else you will get compile errors, because of invalid characters.</strong></p>
+<p>The first line refers to the directory were your final CSS-file will be compiled to. The second line tells where your .scss-files are stored.</p>
 
-<p>The first line refers to the directory were your final CSS-file will be compiled to. The seconds line tells where your .scss-files are stored.</p>
-
-<p>The last line tells the compiler to compress the final CSS-file, so you will save some bandwith (wich is important for mobile-applications).</p>
+<p>The last line tells the compiler to compress the final CSS-file, so you will save some bandwith (which is important for mobile-applications).</p>
 
 <p>Now make a file named <code>screen.scss</code> in the directory <code>sass/</code>. Here you can write CSS-code like you did before.</p>
 
@@ -141,9 +141,9 @@
 </span><span class='line'>$ sudo gem install compass</span></code></pre></td></tr></table></div></figure>
 
 
-<p>To compile the file, we use Terminal. Now we have to go to the folder <code>sass</code> we just created, via Terminal. To change the current directory, type the command <code>cd</code> and then   the path you want to go to. E.g. <code>cd /Applications/MAMP/htdocs/my-first-sass-project</code>.</p>
+<p>To compile the file, we&#8217;ll use Terminal. Go to the folder <code>sass</code> we have just created. To change the current directory, type the command <code>cd</code> and then   the path you want to go to. E.g. <code>cd /Applications/MAMP/htdocs/my-first-sass-project</code>.</p>
 
-<p>Next, we have to compile the <code>screen.scss-file</code>. We will compile the file using Compass. Use the commando ‘compass compile sass/screen.scss’ to compile your scss-file.</p>
+<p>Next, we have to compile the <code>screen.scss-file</code>. We will compile the file using Compass. Use the commando <code>compass compile sass/screen.scss</code> to compile your scss-file.</p>
 
 <p>Now look at your <code>css-folder</code>. There should be a file named <code>screen.css</code>, with your previously written CSS-code, compressed.</p>
 
@@ -157,7 +157,7 @@
 You can declare variables and use them everywhere in your .scss-file. This can come in handy when you wan to use the same colors over and over again for e.g. headings, links, menu&#8230;</p>
 
 <p><strong>Nesting</strong><br/>
-You can write much cleaner CSS-code with this. Code example:</p>
+You can write much cleaner CSS-code with nesting.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -189,7 +189,7 @@ You can write much cleaner CSS-code with this. Code example:</p>
 
 
 <p><strong>Mixins</strong><br/>
-Mixins are like functions. You can pass some parameters and it gives you the result you want. Code example:</p>
+Mixins are like functions. You can pass some parameters and it gives you the result you want.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -219,7 +219,7 @@ Mixins are like functions. You can pass some parameters and it gives you the res
 
 
 <p><strong>Inheritance</strong><br/>
-It is possible to extend selectors from other selectors. Code example:</p>
+It is possible to extend selectors from other selectors.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -244,14 +244,16 @@ It is possible to extend selectors from other selectors. Code example:</p>
 
 <p>If you like what you see, be sure to take a look at these resources to learn Sass. The most complicated part is installing / compiling the files. Most other things speak for themselves.</p>
 
+<h3>Further reference</h3>
+
 <ul>
-<li><a href="" title="http://sass-lang.com/' 'Sass homepage">Oficial page</a></li>
+<li><a href="" title="http://sass-lang.com/' 'Sass homepage">Official page</a></li>
 <li><a href="" title="http://www.lesscss.org/' 'LESS CSS homepage">LESS CSS</a></li>
 <li><a href="" title="http://blog.danielfischer.com/2011/04/18/quickstart-guide-to-using-compass-haml-sass-scss-with-rails-3/' 'Quickstart guide to Sass">Quickstart guide</a></li>
 </ul>
 
 
-<p>Feel free to leave a comment with your thoughts on Sass, my blogpost or anything else. I hope you&#8217;ve enjoyed this one!</p>
+<p>Feel free to leave a comment with your thoughts on Sass. I hope you&#8217;ve enjoyed this one!</p>
 </div>
 
 
