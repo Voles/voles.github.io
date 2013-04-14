@@ -4,7 +4,7 @@
   <title><![CDATA[Category: imperative | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/imperative/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2013-04-14T22:47:58+02:00</updated>
+  <updated>2013-04-14T22:49:41+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -57,7 +57,7 @@ But ever since I’ve started to work with Python, I’ve got in touch with <a h
 
 <p>With what I've learned I found out that I could apply these FP concepts throughout most of my code.</p>
 
-<p>Programming on itself is so big. The more I learn, the more it fascinates me. Functional Programming is yet another step forward to me.</p>
+<p>Programming on itself is so big. The more I learn, the more it fascinates me. Learning Functional Programming feels like a great step forward to me.</p>
 
 <h3>Further reference</h3>
 
@@ -67,7 +67,7 @@ The Functional Programming course on Coursera</p></li>
 <li><p><a href="http://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf" title="Why Functional Programming Matters">Why Functional Programming Matters</a><br/>
 A paper by John Hughes from 1984</p></li>
 <li><p><a href="http://learnyouahaskell.com/chapters%20'Learn%20Haskell">Learn Haskell</a><br/>
-Introduction into Haskell, a functional programming language</p></li>
+Great introduction into Haskell, a functional programming language</p></li>
 </ul>
 
 ]]></content>
