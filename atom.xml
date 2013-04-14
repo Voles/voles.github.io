@@ -4,7 +4,7 @@
   <title><![CDATA[Niels Dequeker]]></title>
   <link href="http://voles.github.io/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2013-04-14T22:49:41+02:00</updated>
+  <updated>2013-04-14T22:50:05+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -49,7 +49,7 @@ These are about:</p>
 <h3>Starting with Python</h3>
 
 <p>As a web developer, I’ve spend a lot of time working with PHP, JavaScript etc.
-But ever since I’ve started to work with Python, I’ve got in touch with <a href="http://docs.python.org/2/tutorial/datastructures.html#list-comprehensions," title="Python list comprehension">list comprehension</a>, generators and iterators. These are all concepts of Functional Programming.</p>
+But ever since I’ve started to work with Python, I’ve got in touch with <a href="http://docs.python.org/2/tutorial/datastructures.html#list-comprehensions" title="Python list comprehension">list comprehension</a>, generators and iterators. These are all concepts of Functional Programming.</p>
 
 <p>It provides new ways to work with data, which results in more elegant and compact code, which in turn is better readable.</p>
 
