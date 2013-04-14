@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flash Builder | My Octopress Blog]]></title>
   <link href="http://Voles.github.io/blog/categories/flash-builder/atom.xml" rel="self"/>
   <link href="http://Voles.github.io/"/>
-  <updated>2013-04-14T10:26:49+02:00</updated>
+  <updated>2013-04-14T10:30:08+02:00</updated>
   <id>http://Voles.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -97,7 +97,7 @@
 </span><span class='line'><span class="n">stage</span><span class="o">.</span><span class="na">scaleMode</span> <span class="o">=</span> <span class="n">StageScaleMode</span><span class="o">.</span><span class="na">NO_SCALE</span><span class="o">;</span>
 </span><span class='line'><span class="n">stage</span><span class="o">.</span><span class="na">align</span> <span class="o">=</span> <span class="n">StageAlign</span><span class="o">.</span><span class="na">TOP_LEFT</span><span class="o">;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">(</span><span class="n">loaderInfo</span><span class="o">.</span><span class="na">bytesLoaded</span> <span class="o">&amp;</span><span class="n">gt</span><span class="o">;=</span> <span class="n">loaderInfo</span><span class="o">.</span><span class="na">bytesTotal</span><span class="o">)</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">(</span><span class="n">loaderInfo</span><span class="o">.</span><span class="na">bytesLoaded</span> <span class="o">&gt;</span> <span class="n">loaderInfo</span><span class="o">.</span><span class="na">bytesTotal</span><span class="o">)</span>
 </span><span class='line'><span class="o">{&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;//</span> <span class="n">swf</span> <span class="k">is</span> <span class="n">already</span> <span class="n">loaded</span>
@@ -204,7 +204,7 @@
 
 <h2>Source files</h2>
 
-<p>You can download <a href="/assets/downloads/MyFirstActionscriptProject.zip">the example project</a> to see the completed project.</p>
+<p>You can download <a href="/downloads/MyFirstActionscriptProject.zip">the example project</a> and play around with it.</p>
 
 <p>I hope you learned something from this. Please, do not hesitate to comment with your opinion, doubts, feedback...</p>
 ]]></content>
