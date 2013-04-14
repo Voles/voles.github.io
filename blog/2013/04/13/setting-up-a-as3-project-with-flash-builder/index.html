@@ -102,116 +102,121 @@
 
 <p>Change the <em>Main application file</em> to <em>Main.as</em>, this is just a convention. Press finish to complete your project setup.</p>
 
-<p><a href="http://student.devine.be/niels.dequeker/20102011/CMD1/BLOG/2011/setting-up-a-as3-project-with-flash-builder/2-main-application-file" rel="attachment wp-att-384"><img class="alignleft size-full wp-image-384" title="Main application file" src="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/2.-main-application-file.png" alt="Detail main application file input" width="556" height="56" /></a></p>
+<p><img class="left" src="/images/posts/main-application-file.png" title="'Main application file'" ></p>
 
-<h3>Flash Library</h3>
-
-
-<!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} span.s1 {letter-spacing: 0.0px} -->
-
+<h2>Flash Library</h2>
 
 <p>Now, the only thing we have is an empty AS3-project. We can use Flash Builder to write our classes etc., but most projects will need some graphics. Thats where the Flash IDE comes in.</p>
-
-<!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} span.s1 {letter-spacing: 0.0px} -->
-
 
 <p>Make a new .fla-file and make a MovieClip with a very basic drawing in it. Go to the properties of the MovieClip.</p>
 
 <p>Tick <em>Export for ActionScript</em> and change the classname (‘Class’) to &#8216;SimpleShape’. You schould have something like this:</p>
 
-<p><a href="http://student.devine.be/niels.dequeker/20102011/CMD1/BLOG/2011/setting-up-a-as3-project-with-flash-builder/3-mc-properties" rel="attachment wp-att-395"><img class="size-thumbnail wp-image-395 alignnone" title="MovieClip properties" src="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/3.-mc-properties-150x150.png" alt="Dialog MovieClip properties in Flash IDE" width="150" height="150" /></a></p>
+<p><img class="left" src="/images/posts/mc-properties.png" title="'MovieClip properties'" ></p>
 
-<p>Because we want to use the library of this .fla-file with Flash Builder, we have to make a .swc-file. You can learn more about .swc-files in this <a title="Stackoverflow question, what is swc and how is it used" href="http://stackoverflow.com/questions/1340866/what-is-a-flash-swc-file-and-how-is-it-used" target="_blank">Stackoverflow question</a>.</p>
+<p>Because we want to use the library of this .fla-file with Flash Builder, we have to make a .swc-file. You can learn more about .swc-files in this <a href="http://stackoverflow.com/questions/1340866/what-is-a-flash-swc-file-and-how-is-it-used" title="Stackoverflow question, what is swc and how is it used">Stackoverflow question</a>.</p>
 
-<p>To let your .fla-file generate a .swc-file, go to <em>File</em> <strong>→</strong> <em>Publish Settings</em>. Next, go to the <em>Flash</em>-tab and thick <em>Export SWC</em>.
-<a href="http://student.devine.be/niels.dequeker/20102011/CMD1/BLOG/2011/setting-up-a-as3-project-with-flash-builder/4-publish-settings" rel="attachment wp-att-396"><img class="size-thumbnail wp-image-396 alignnone" title="Publish settings" src="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/4.-publish-settings-150x112.png" alt="Detail publish settings Flash IDE" width="150" height="112" /></a></p>
+<p>To let your .fla-file generate a .swc-file, go to <em>File</em> <strong>→</strong> <em>Publish Settings</em>. Next, go to the <em>Flash</em>-tab and thick <em>Export SWC</em>.</p>
+
+<p><img class="left" src="/images/posts/publish-settings.png" title="'Publish settings'" ></p>
 
 <p>Press the <em>OK</em>-button. Every time you change something in your .swf-file, you will have to publish your .swc-file again to make sure it contains the latest updates of your library. You can generate a .swc-file with the shortcut <em>command + return</em>.</p>
 
-<h3>Link the SWC to your Flash Builder project</h3>
+<h2>Link the SWC to your Flash Builder project</h2>
 
+<p>Go back to Flash Builder and make a new folder named ‘libs’ in your project. Here you can put all your resources for the project. The structure of your project should look like this:</p>
 
-<!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} span.s1 {letter-spacing: 0.0px} -->
-
-
-<p>Go back to Flash Builder and make a new folder named ‘libs’ in your project. Here you can put all your resources for the project. The structure of your project should look like this:
-<a href="http://student.devine.be/niels.dequeker/20102011/CMD1/BLOG/2011/setting-up-a-as3-project-with-flash-builder/5-project-structure" rel="attachment wp-att-397"><img class="size-thumbnail wp-image-397 alignnone" title="Project structure" src="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/5.-project-structure-150x150.png" alt="Detail Project structure in Flash Builder" width="150" height="150" /></a></p>
+<p><img class="left" src="/images/posts/project-structure.png" title="'Project structure'" ></p>
 
 <p>Go back to the Flash IDE and save your .fla-file in the folder <em>libs</em> you have just created in your Flash Builder project. The location of your project depends on your workspace in Flash Builder.</p>
 
-<p>Save the .fla-file as <em>library.fla</em> and again create a .swc-file (<em>command + return</em>). Go back to Flash Builder and your project structure now should look like this:
-<a href="http://student.devine.be/niels.dequeker/20102011/CMD1/BLOG/2011/setting-up-a-as3-project-with-flash-builder/6-libs-folder" rel="attachment wp-att-398"><img class="size-thumbnail wp-image-398 alignnone" title="Libs folder" src="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/6.-libs-folder-150x150.png" alt="Project structure with libs-folder" width="150" height="150" /></a></p>
+<p>Save the .fla-file as <em>library.fla</em> and again create a .swc-file (<em>command + return</em>). Go back to Flash Builder and your project structure now should look like this:</p>
+
+<p><img class="left" src="/images/posts/libs-folder.png" title="'Libs folder'" ></p>
 
 <p>Now we must let the project know that he can use the .swc-files in the <em>libs</em>-folder. Right-click on the name of the project, go to <em>Properties</em>. Go to the <em>ActionScript Build Path</em>-tab and then to the <em>Library path</em>-view. Click <em>Add SWC Folder</em> and select your <em>libs</em>-folder. You should see this:</p>
 
-<p><a href="http://student.devine.be/niels.dequeker/20102011/CMD1/BLOG/2011/setting-up-a-as3-project-with-flash-builder/7-build-path" rel="attachment wp-att-399"><img class="size-thumbnail wp-image-399 alignnone" title="ActionScript build path" src="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/7.-build-path-150x150.png" alt="Dialog ActionScript build path tab" width="150" height="150" /></a></p>
+<p><img class="left" src="/images/posts/build-path.png" title="'Actionscript build path'" ></p>
 
 <p>Now your .swc-file is linked with your Flash Builder project, click <em>Ok</em>.</p>
 
-<h3>Preloader</h3>
-
-
-<!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} span.s1 {letter-spacing: 0.0px} -->
-
+<h2>Preloader</h2>
 
 <p>We have a very small .swc-file, with only one MovieClip. But when you have lots and lots of graphics, MovieClips and sound, your .swc-file will soon become bigger. When your .swf-file is loading all these data, we want to give the user some feedback. We can do this by making a preloader.</p>
 
-<!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} span.s1 {letter-spacing: 0.0px} -->
-
-
 <p>In the constructor of your Main.as, add these lines of code:</p>
 
-<pre lang="as3">// stage
-stage.scaleMode = StageScaleMode.NO_SCALE;
-stage.align = StageAlign.TOP_LEFT;
-
-if (loaderInfo.bytesLoaded &gt;= loaderInfo.bytesTotal)
-{
-    // swf is already loaded
-    preloaderCompleteHandler(null);
-}
-else
-{
-    // preloader methods
-    loaderInfo.addEventListener(Event.COMPLETE, preloaderCompleteHandler);
-    loaderInfo.addEventListener(ProgressEvent.PROGRESS, preloaderProgressHandler);
-}</pre>
-
-
-<!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} span.s1 {letter-spacing: 0.0px} -->
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="c1">// stage</span>
+</span><span class='line'><span class="n">stage</span><span class="o">.</span><span class="na">scaleMode</span> <span class="o">=</span> <span class="n">StageScaleMode</span><span class="o">.</span><span class="na">NO_SCALE</span><span class="o">;</span>
+</span><span class='line'><span class="n">stage</span><span class="o">.</span><span class="na">align</span> <span class="o">=</span> <span class="n">StageAlign</span><span class="o">.</span><span class="na">TOP_LEFT</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">(</span><span class="n">loaderInfo</span><span class="o">.</span><span class="na">bytesLoaded</span> <span class="o">&amp;</span><span class="n">gt</span><span class="o">;=</span> <span class="n">loaderInfo</span><span class="o">.</span><span class="na">bytesTotal</span><span class="o">)</span>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>  <span class="c1">// swf is already loaded</span>
+</span><span class='line'>  <span class="n">preloaderCompleteHandler</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>  <span class="c1">// preloader methods</span>
+</span><span class='line'>  <span class="n">loaderInfo</span><span class="o">.</span><span class="na">addEventListener</span><span class="o">(</span><span class="n">Event</span><span class="o">.</span><span class="na">COMPLETE</span><span class="o">,</span> <span class="n">preloaderCompleteHandler</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">loaderInfo</span><span class="o">.</span><span class="na">addEventListener</span><span class="o">(</span><span class="n">ProgressEvent</span><span class="o">.</span><span class="na">PROGRESS</span><span class="o">,</span> <span class="n">preloaderProgressHandler</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>We look at the loaderInfo of the SWF tho check if all data is loaded. If not, we add two eventlisteners to the loaderInfo. Next, add these functions to the Main-class:</p>
 
-<pre lang="as3">/**
- * Preloader progress
- */
-private function preloaderProgressHandler(event:ProgressEvent):void
-{
-    trace("Preloader progress: " + Math.round((event.bytesLoaded / event.bytesTotal) * 100) + "%");
-}
-
-/**
- * Preloader complete
- */
-private function preloaderCompleteHandler(event:Event):void
-{
-
-}</pre>
-
-
-<!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} span.s1 {letter-spacing: 0.0px} -->
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * Preloader progress</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="kd">private</span> <span class="kd">function </span><span class="nf">preloaderProgressHandler</span><span class="o">(</span><span class="n">event</span><span class="o">:</span><span class="kt">ProgressEvent</span><span class="o">):</span><span class="kt">void</span>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>  <span class="nf">trace</span><span class="o">(</span><span class="s2">&quot;Preloader progress: &quot;</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="na">round</span><span class="o">((</span><span class="n">event</span><span class="o">.</span><span class="na">bytesLoaded</span> <span class="o">/</span> <span class="n">event</span><span class="o">.</span><span class="na">bytesTotal</span><span class="o">)</span> <span class="o">*</span> <span class="mi">100</span><span class="o">)</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * Preloader complete</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="kd">private</span> <span class="kd">function </span><span class="nf">preloaderCompleteHandler</span><span class="o">(</span><span class="n">event</span><span class="o">:</span><span class="kt">Event</span><span class="o">):</span><span class="kt">void</span>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>The progress-function contains some simple math to trace the progress of the preloader. You can also use this value so visualise the progress.</p>
 
-<!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} span.s1 {letter-spacing: 0.0px} -->
-
-
 <p>Now we have to write the preloaderCompleteHandler, but first a little more info about preloaders and Flash.</p>
-
-<!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px} span.s1 {letter-spacing: 0.0px} -->
-
 
 <p>When the SWF is loading, it will not play until every classe you have used on the first frame is loaded. So we will add a second frame to the Flash Builder project, where you can use as much classes as you want. On the first frame, we will use as little classes as possible.</p>
 
@@ -219,48 +224,48 @@ private function preloaderCompleteHandler(event:Event):void
 
 <p>To make this work, we first have to make a second class, I name it ‘Application.as’ and put it in a package named ‘be.devine’.</p>
 
-<p>Again, right click on your Flash Builder project and go to ‘Properties’. In the ‘ActionScript Compiler’-tab, put this in the ‘Additional compiler arguments’: “-frame &#8220;start&#8221; be.devine.Application”. This creates a second frame for your project. You should have this:
-<a href="http://student.devine.be/niels.dequeker/20102011/CMD1/BLOG/2011/setting-up-a-as3-project-with-flash-builder/8-compiler-arguments" rel="attachment wp-att-404"><img class="size-full wp-image-404 alignnone" title="Additional compiler arguments" src="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/8.-compiler-arguments.png" alt="Flash Builder detail additional compiler arguments" width="476" height="61" /></a></p>
+<p>Again, right click on your Flash Builder project and go to ‘Properties’. In the ‘ActionScript Compiler’-tab, put this in the ‘Additional compiler arguments’: “-frame &#8220;start&#8221; be.devine.Application”. This creates a second frame for your project. You should have this:</p>
+
+<p><img class="left" src="/images/posts/compiler-arguments.png" title="'Additional compiler arguments'" ></p>
 
 <p>Go to your Main.as class and change the superclass to ‘MovieClip’ instead of Sprite. You have to do this because we want multiple frames (one frame for the preloader and a second frame for the application itself) and a Sprite doesn’t have a timeline.</p>
 
-<!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} span.s1 {letter-spacing: 0.0px} -->
-
-
 <p>The last thing we have to write is the preloaderCompleteHandler. Add these lines to the function:</p>
 
-<pre lang="as3">// go to second frame
-gotoAndStop("start");
-
-// application classname
-var applicationClass:* = getDefinitionByName("be.devine.Application");
-
-// make the application
-var application:* = new applicationClass();
-addChild(application);</pre>
-
-
-<!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} span.s1 {letter-spacing: 0.0px} -->
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="c1">// go to second frame</span>
+</span><span class='line'><span class="n">gotoAndStop</span><span class="o">(</span><span class="s2">&quot;start&quot;</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// application classname</span>
+</span><span class='line'><span class="n">var</span> <span class="n">applicationClass</span><span class="o">:*</span> <span class="o">=</span> <span class="n">getDefinitionByName</span><span class="o">(</span><span class="s2">&quot;be.devine.Application&quot;</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// make the application</span>
+</span><span class='line'><span class="n">var</span> <span class="n">application</span><span class="o">:*</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">applicationClass</span><span class="o">();</span>
+</span><span class='line'><span class="n">addChild</span><span class="o">(</span><span class="n">application</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>You see I’ve used the asterisk, this is used like a ‘joker’. So the ‘application’ variable can be any class, but is doesn’t make a explicit reference to the Application-class. This makes sure the that the SWF will not wait until the Application-class is loaded before showing up the preloader.</p>
 
-<h3>Testing the preloader</h3>
-
-
-<!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px} span.s1 {letter-spacing: 0.0px} -->
-
+<h2>Testing the preloader</h2>
 
 <p>To make sure the preloader is working properly, I’ve added a big image (3.8 MB) in the Application-class.</p>
 
 <p>When you debug the project, you will see a lot of traces with the current status of te preloader, when the application is loaded, the Application-class will trace “Hello World”.</p>
 
-<h3>Source files</h3>
+<h2>Source files</h2>
 
+<p>You can download <a href="/assets/downloads/MyFirstActionscriptProject.zip">the example project</a> to see the completed project.</p>
 
-<p>You can download the source files <a title="MyFirstActionscriptProject" href="http://blog.nielsdequeker.be/wp-content/uploads/2011/07/MyFirstActionscriptProject.zip">here</a>.</p>
-
-<p>I hope you learned something from this. Please, do not hesitate to comment with your opinion, doubs, feedback&#8230;@</p>
+<p>I hope you learned something from this. Please, do not hesitate to comment with your opinion, doubts, feedback&#8230;</p>
 </div>
 
 
