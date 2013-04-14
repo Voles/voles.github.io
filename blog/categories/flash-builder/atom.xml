@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Flash Builder | Niels Dequeker]]></title>
-  <link href="http://Voles.github.io/blog/categories/flash-builder/atom.xml" rel="self"/>
-  <link href="http://Voles.github.io/"/>
-  <updated>2013-04-14T10:43:12+02:00</updated>
-  <id>http://Voles.github.io/</id>
+  <link href="http://voles.github.io/blog/categories/flash-builder/atom.xml" rel="self"/>
+  <link href="http://voles.github.io/"/>
+  <updated>2013-04-14T10:55:43+02:00</updated>
+  <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Setting up a AS3 project with Flash Builder]]></title>
-    <link href="http://Voles.github.io/blog/2013/04/13/setting-up-a-as3-project-with-flash-builder/"/>
+    <link href="http://voles.github.io/blog/2013/04/13/setting-up-a-as3-project-with-flash-builder/"/>
     <updated>2013-04-13T20:03:00+02:00</updated>
-    <id>http://Voles.github.io/blog/2013/04/13/setting-up-a-as3-project-with-flash-builder</id>
+    <id>http://voles.github.io/blog/2013/04/13/setting-up-a-as3-project-with-flash-builder</id>
     <content type="html"><![CDATA[<h2>Basic setup</h2>
 
 <p>First we have to create a new project in <strong>Flash Builder</strong>, go to <em>File</em> <strong>→</strong> <em>New</em> <strong>→</strong> <em>ActionScript Project</em>.</p>

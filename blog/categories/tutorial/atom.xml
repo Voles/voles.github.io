@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: tutorial | Niels Dequeker]]></title>
-  <link href="http://Voles.github.io/blog/categories/tutorial/atom.xml" rel="self"/>
-  <link href="http://Voles.github.io/"/>
-  <updated>2013-04-14T10:43:12+02:00</updated>
-  <id>http://Voles.github.io/</id>
+  <link href="http://voles.github.io/blog/categories/tutorial/atom.xml" rel="self"/>
+  <link href="http://voles.github.io/"/>
+  <updated>2013-04-14T10:55:43+02:00</updated>
+  <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
     
@@ -14,10 +14,41 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Drag &amp; drop with AIR]]></title>
+    <link href="http://voles.github.io/blog/2013/04/14/drag-and-drop-with-air/"/>
+    <updated>2013-04-14T10:52:00+02:00</updated>
+    <id>http://voles.github.io/blog/2013/04/14/drag-and-drop-with-air</id>
+    <content type="html"><![CDATA[<p>This is a small blogpost, about how to implement drag and drop functionality in an AIR-application. It can be used to make an application much more easier to work with.</p>
+
+<p>At first, you have to add two event listeners to the component, <code>NATIVE_DRAG_ENTER</code> and <code>NATIVE_DRAG_DROP</code>. Both of them are <code>NativeDragEvents</code>.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="n">addEventListener</span><span class="o">(</span><span class="n">NativeDragEvents</span><span class="o">.</span> <span class="n">NATIVE_DRAG_ENTER</span><span class="o">,</span> <span class="n">nativedragenterHandler</span><span class="o">);</span>
+</span><span class='line'><span class="n">addEventListener</span><span class="o">(</span><span class="n">NativeDragEvents</span><span class="o">.</span> <span class="n">NATIVE_DRAG_DROP</span><span class="o">,</span> <span class="n">nativedragdropHandler</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>The <code>nativedragenterHandler</code> will be triggered whenever a user hovers the component with one or more files selected. The <code>nativedragdropHandler</code> will be triggered when the user ‘drops’ his files on this component.</p>
+
+<p>Put this code in the <code>nativedragenterHandler</code>, to let the component accept a user to drop his files here.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="n">DragManager</span><span class="o">.</span><span class="na">acceptDragDrop</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Everything else happens in the <code>nativedragdropHandler</code>. The code below shows you how to fetch the dropped files, so you can work with them in the application.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="kd">var</span> <span class="n">droppedFiles</span><span class="p">:</span><span class="kt">Array</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="na">clipboard</span><span class="o">.</span><span class="na">getData</span><span class="o">(</span><span class="n">ClipboardFormats</span><span class="o">.</span><span class="na">FILE_LIST_FORMAT</span><span class="o">)</span> <span class="k">as</span> <span class="n">Array</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Setting up a AS3 project with Flash Builder]]></title>
-    <link href="http://Voles.github.io/blog/2013/04/13/setting-up-a-as3-project-with-flash-builder/"/>
+    <link href="http://voles.github.io/blog/2013/04/13/setting-up-a-as3-project-with-flash-builder/"/>
     <updated>2013-04-13T20:03:00+02:00</updated>
-    <id>http://Voles.github.io/blog/2013/04/13/setting-up-a-as3-project-with-flash-builder</id>
+    <id>http://voles.github.io/blog/2013/04/13/setting-up-a-as3-project-with-flash-builder</id>
     <content type="html"><![CDATA[<h2>Basic setup</h2>
 
 <p>First we have to create a new project in <strong>Flash Builder</strong>, go to <em>File</em> <strong>→</strong> <em>New</em> <strong>→</strong> <em>ActionScript Project</em>.</p>

@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://Voles.github.io/sitemap.xml 
+Sitemap: http://voles.github.io/sitemap.xml 
