@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tutorial | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2013-04-14T10:55:43+02:00</updated>
+  <updated>2013-04-14T19:30:08+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -18,7 +18,7 @@
     <link href="http://voles.github.io/blog/2013/04/14/drag-and-drop-with-air/"/>
     <updated>2013-04-14T10:52:00+02:00</updated>
     <id>http://voles.github.io/blog/2013/04/14/drag-and-drop-with-air</id>
-    <content type="html"><![CDATA[<p>This is a small blogpost, about how to implement drag and drop functionality in an AIR-application. It can be used to make an application much more easier to work with.</p>
+    <content type="html"><![CDATA[<p>This is a small blogpost on how to implement drag and drop functionality in an AIR-application. It can be used to make an application much more easier to work with.</p>
 
 <p>At first, you have to add two event listeners to the component, <code>NATIVE_DRAG_ENTER</code> and <code>NATIVE_DRAG_DROP</code>. Both of them are <code>NativeDragEvents</code>.</p>
 
