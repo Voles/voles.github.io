@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flash Builder | My Octopress Blog]]></title>
   <link href="http://Voles.github.io/blog/categories/flash-builder/atom.xml" rel="self"/>
   <link href="http://Voles.github.io/"/>
-  <updated>2013-04-14T10:26:18+02:00</updated>
+  <updated>2013-04-14T10:26:49+02:00</updated>
   <id>http://Voles.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -24,7 +24,7 @@
 
 <p>You will see a dialog where you can fill in your project details. Fill in your <em>Project name</em> and press the <em>Next</em> button.</p>
 
-<p><img class="left" src="/images/posts/project-name.png" title="'Project name'" ></p>
+<p><img src="/images/posts/project-name.png" title="'Project name'" ></p>
 
 <p>Change the <em>Main application file</em> to <em>Main.as</em>, this is just a convention. Press finish to complete your project setup.</p>
 
