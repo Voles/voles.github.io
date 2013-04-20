@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tutorial | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2013-04-20T16:19:15+02:00</updated>
+  <updated>2013-04-20T16:22:26+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -46,12 +46,13 @@
 
 <p>Next we create a new environment named 'my-environment', using the command <code>virtualenv</code>.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ mkdir ~/Documents/environments/
-</span><span class='line'>$ cd ~/Documents/environments/
-</span><span class='line'>$ virtualenv my-environment --no-site-packages</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>mkdir ~/Documents/environments/
+</span><span class='line'><span class="nv">$ </span><span class="nb">cd</span> ~/Documents/environments/
+</span><span class='line'><span class="nv">$ </span>virtualenv my-environment --no-site-packages
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Now we can create a link to it, so we don't have to type the full path everytime we want to use the environment.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Niels Dequeker]]></title>
   <link href="http://voles.github.io/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2013-04-20T16:19:15+02:00</updated>
+  <updated>2013-04-20T16:22:26+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -47,12 +47,13 @@
 
 <p>Next we create a new environment named &#8216;my-environment&#8217;, using the command <code>virtualenv</code>.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ mkdir ~/Documents/environments/
-</span><span class='line'>$ cd ~/Documents/environments/
-</span><span class='line'>$ virtualenv my-environment --no-site-packages</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>mkdir ~/Documents/environments/
+</span><span class='line'><span class="nv">$ </span><span class="nb">cd</span> ~/Documents/environments/
+</span><span class='line'><span class="nv">$ </span>virtualenv my-environment --no-site-packages
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Now we can create a link to it, so we don&#8217;t have to type the full path everytime we want to use the environment.</p>
