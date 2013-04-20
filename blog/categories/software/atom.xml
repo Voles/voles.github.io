@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: software | Niels Dequeker]]></title>
+  <link href="http://voles.github.io/blog/categories/software/atom.xml" rel="self"/>
+  <link href="http://voles.github.io/"/>
+  <updated>2013-04-20T16:41:39+02:00</updated>
+  <id>http://voles.github.io/</id>
+  <author>
+    <name><![CDATA[Niels Dequeker]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Favourite Mac Utilities]]></title>
+    <link href="http://voles.github.io/blog/2013/04/25/favourite-mac-utilities/"/>
+    <updated>2013-04-25T16:28:00+02:00</updated>
+    <id>http://voles.github.io/blog/2013/04/25/favourite-mac-utilities</id>
+    <content type="html"><![CDATA[<p>When you spend a lot of time in front of your compyter, it is important to optimize your workflow. Below are some tools that enhance my daily workflow.</p>
+
+<ol>
+<li><a href="http://mizage.com/divvy/" title="Divvy, window management at its finest">Divvy</a><br/>
+Divvy is a utility to quickly resize and position your windows. When I press <kbd>&#x2325;</kbd>+<kbd>&uarr;</kbd></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>
