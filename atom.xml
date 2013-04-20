@@ -4,7 +4,7 @@
   <title><![CDATA[Niels Dequeker]]></title>
   <link href="http://voles.github.io/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2013-04-15T10:52:31+02:00</updated>
+  <updated>2013-04-20T16:00:44+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -12,6 +12,208 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Getting started with Python]]></title>
+    <link href="http://voles.github.io/blog/2013/04/20/getting-started-with-python/"/>
+    <updated>2013-04-20T15:59:00+02:00</updated>
+    <id>http://voles.github.io/blog/2013/04/20/getting-started-with-python</id>
+    <content type="html"><![CDATA[<p>It&#8217;s been a while now since I&#8217;ve written my first line of Python code. With this blogpost I&#8217;d like to share some knowledge, to make it easier for others to get started with Python. I assume you have some basic experience with the command line, and know what unittests are for.</p>
+
+<p>Note: the commands below are written for Mac OSX</p>
+
+<h2>Different versions of Python</h2>
+
+<p>There are two main versions of Python which are both still frequently used. The most recent version is Python 3, and there is also the older 2.7 version.</p>
+
+<blockquote><p>Python 2.x is the status quo, Python 3.x is the present and future of the language</p>
+
+<p><cite><a href="http://wiki.python.org/moin/Python2orPython3" title="Python2orPython3">Python Wiki</a></cite></p></blockquote>
+
+<p>On the Python Wiki you can find more information about <a href="http://wiki.python.org/moin/Python2orPython3," title="Which Python version to use">which Python version to use</a>.</p>
+
+<h2>Environment setup</h2>
+
+<p>It is common to setup a new environment when you start with a new Python project. The reason for this is that different projects will have different dependencies on other libraries.</p>
+
+<p>You can install all of the dependencies globally, although thats not recommended. Once you switch to an other machine, or if you work in team, you have to make sure all the right version of each external library is installed.</p>
+
+<p>Let&#8217;s get started. First of all we install the right tools to set up an environment.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="err">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next we create a new environment named &#8216;my-environment&#8217;, using the command <code>virtualenv</code>.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="err">$</span> <span class="n">mkdir</span> <span class="o">~/</span><span class="n">Documents</span><span class="o">/</span><span class="n">environments</span><span class="o">/</span>
+</span><span class='line'><span class="err">$</span> <span class="n">cd</span> <span class="o">~/</span><span class="n">Documents</span><span class="o">/</span><span class="n">environments</span><span class="o">/</span>
+</span><span class='line'><span class="err">$</span> <span class="n">virtualenv</span> <span class="n">my</span><span class="o">-</span><span class="n">environment</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now we can create a link to it, so we don&#8217;t have to type the full path everytime we want to use the environment.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="err">$</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">~/</span><span class="n">Documents</span><span class="o">/</span><span class="n">environments</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">environment</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">environment</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you execute <code>$ my-environment</code>, you can immediately start writing code. Let&#8217;s print something to the Terminal with <code>print "Hello, World!"</code>. When you write <code>2 + 3</code>, you will get <code>5</code> as a result.</p>
+
+<p>That&#8217;s it, you just evaluated your first two expressions in Python. Now we have our own Python environment where we can install and update all of the dependencies.</p>
+
+<p>Writing your code directly in the Terminal is of course not recommended when you want to write serious programs.
+Let&#8217;s make a project for this environment.</p>
+
+<h2>Project setup</h2>
+
+<p>Go to the project folder and create a file named <code>math.py</code> with the following content.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># -*- coding: utf-8 -*-</span>
+</span><span class='line'><span class="sd">&#39;&#39;&#39;</span>
+</span><span class='line'><span class="sd">[2013] Niels Dequeker</span>
+</span><span class='line'><span class="sd"> All Rights Reserved.</span>
+</span><span class='line'><span class="sd">&#39;&#39;&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">Math</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span class='line'>                <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">def</span> <span class="nf">times</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span class='line'>                <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span class='line'>                <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is how we write a basic class in Python. It has three methods, <code>sum</code>, <code>times</code> and <code>divide</code>.</p>
+
+<p>Now we can write some unittests to validate our code. Create a file named <code>tests.py</code> with the following content.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># -*- coding: utf-8 -*-</span>
+</span><span class='line'><span class="sd">&#39;&#39;&#39;</span>
+</span><span class='line'><span class="sd">[2012] SocialExpress</span>
+</span><span class='line'><span class="sd"> All Rights Reserved.</span>
+</span><span class='line'><span class="sd">&#39;&#39;&#39;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">unittest</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">Math</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">Test</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">test_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">math</span> <span class="o">=</span> <span class="n">Math</span><span class="p">()</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&#39;Incorrect sum&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">test_times</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">math</span> <span class="o">=</span> <span class="n">Math</span><span class="p">()</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">times</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s">&#39;Incorrect times&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">test_divide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">math</span> <span class="o">=</span> <span class="n">Math</span><span class="p">()</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;Incorrect division&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let&#8217;s go through the code step by step.</p>
+
+<p>First of all we import our dependencies. <code>Math</code> is our own class that we&#8217;ve created before.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">unittest</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">Math</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next is the class definition for the test. It extends from <code>unittest.TestCase</code>.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">class</span> <span class="nc">Test</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now what follows are the methods. Each one is testing one functionality of our <code>Math</code> class. We check the return values with <code>assertTrue</code> and get an exception when these aren&#8217;t what we expected.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">test_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">math</span> <span class="o">=</span> <span class="n">Math</span><span class="p">()</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&#39;Incorrect sum&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally, we define that if the <code>tests.py</code> file is executed directly, it has to execute our tests.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s it. We can run our code in the Terminal with <code>$ my-environment tests.py</code>. You should see <code>Ran 3 tests</code>, which mean your code works as expected.</p>
+
+<h2>Further reference</h2>
+
+<ul>
+<li><a href="http://www.codecademy.com/courses/getting-started-with-python," title="Getting Started with Python on Codeacademy">Getting Started with Python on Codeacademy</a></li>
+<li><a href="http://docs.python.org/2/tutorial/," title="The Python tutorial">The Python tutorial</a></li>
+<li><a href="www.python.com" title="Python homepage">Python homepage</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[First steps into Functional Programming]]></title>
