@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tools | Niels Dequeker]]></title>
+  <link href="http://voles.github.io/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="http://voles.github.io/"/>
+  <updated>2013-04-22T11:27:30+02:00</updated>
+  <id>http://voles.github.io/</id>
+  <author>
+    <name><![CDATA[Niels Dequeker]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My favourite Mac Utilities]]></title>
+    <link href="http://voles.github.io/blog/2013/04/25/favourite-mac-utilities/"/>
+    <updated>2013-04-25T16:28:00+02:00</updated>
+    <id>http://voles.github.io/blog/2013/04/25/favourite-mac-utilities</id>
+    <content type="html"><![CDATA[<p>When you spend a lot of time in front of your computer, it is important to optimize your workflow. Below are some tools that enhance my daily workflow.</p>
+
+<h2><a href="http://mizage.com/divvy/" title="Divvy, window management at its finest">Divvy</a></h2>
+
+<p>Divvy is a utility to quickly resize and position your windows. My configuration is as follows:</p>
+
+<ul>
+<li><code>&#x2325; + &uarr;</code> make the current active window fullscreen</li>
+<li><code>&#x2325; + &darr;</code> make the current acitve window center in the middle, with half the size of the window</li>
+<li><code>&#x2325; + &larr;</code> make the current active window take in the left side of the screen</li>
+<li><code>&#x2325; + &rarr;</code> make the current active window take in the right side of the screen</li>
+</ul>
+
+
+<p><img src="/images/posts/divvy.png" title="'Divvy screenshot'" ></p>
+
+<h2><a href="http://stereopsis.com/flux/" title="f.lux">Flux</a></h2>
+
+<p>f.lux makes your computer screen look like the room you're in, all the time. When the sun sets, it makes your computer look like your indoor lights. In the morning, it makes things look like sunlight again.</p>
+
+<p><img src="/images/posts/flux.png" title="'Flux screenshot'" ></p>
+
+<h2><a href="http://www.alfredapp.com/," title="Alfred App">Alfred</a></h2>
+
+<p>Alfred is a productivity application for Mac OS X, which aims to save you time in searching your local computer and the web. You can best compare it with the Mac Spotlight on steroids.</p>
+
+<p><img src="/images/posts/alfred.png" title="'Alfred screenshot'" ></p>
+]]></content>
+  </entry>
+  
+</feed>
