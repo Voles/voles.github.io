@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Amsterdam | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/amsterdam/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2013-06-09T18:31:22+02:00</updated>
+  <updated>2013-06-09T18:32:35+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The first Amsterdam JavaScript MVC Meetup]]></title>
-    <link href="http://voles.github.io/blog/2012/06/09/amsterdam-javascript-mvc-meetup/"/>
-    <updated>2012-06-09T17:08:00+02:00</updated>
-    <id>http://voles.github.io/blog/2012/06/09/amsterdam-javascript-mvc-meetup</id>
+    <link href="http://voles.github.io/blog/2013/06/09/amsterdam-javascript-mvc-meetup/"/>
+    <updated>2013-06-09T10:08:00+02:00</updated>
+    <id>http://voles.github.io/blog/2013/06/09/amsterdam-javascript-mvc-meetup</id>
     <content type="html"><![CDATA[<p>On May 22 we have organized the first JS MVC Meetup in Amsterdam. With this post I'd like to share why we have setup the Meetup, together with some pictures.</p>
 
 <h3>Why organizing a JS MVC specific Meetup</h3>
