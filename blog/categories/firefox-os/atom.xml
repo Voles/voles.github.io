@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Firefox OS | Niels Dequeker]]></title>
+  <link href="http://voles.github.io/blog/categories/firefox-os/atom.xml" rel="self"/>
+  <link href="http://voles.github.io/"/>
+  <updated>2013-08-05T23:19:54+02:00</updated>
+  <id>http://voles.github.io/</id>
+  <author>
+    <name><![CDATA[Niels Dequeker]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Firefox OS: an introduction]]></title>
+    <link href="http://voles.github.io/blog/2013/08/05/firefox-os-an-introduction/"/>
+    <updated>2013-08-05T22:47:00+02:00</updated>
+    <id>http://voles.github.io/blog/2013/08/05/firefox-os-an-introduction</id>
+    <content type="html"><![CDATA[<p>On August 5 I was invited by <a href="https://twitter.com/remcoder">Remco</a> to join the <a href="https://plus.google.com/u/0/events/ctdip0rot71j36rrkkl4rkto1p0">Firefox OS event</a> at the <a href="http://q42.com/">Q42</a> office in Amsterdam. It was an great evening. With this blogpost, I’d like to share some of the things I’ve learned.</p>
+
+<p><img src="/images/posts/meetup-firefox-os.JPG"></p>
+
+<h1>Discussed topics</h1>
+
+<p>Speakers <a href="https://twitter.com/alispivak">Ali Spivak</a> (projectmanager for the Mozilla Developer Network), <a href="https://twitter.com/sergimansilla">Sergi Mansilla</a> and <a href="https://twitter.com/janjongboom">Jan Jongeboom</a> (who make software for Firefox OS) gave presentations about Firefox OS, a community-based system for mobile devices.</p>
+
+<p>Besides a general introduction, the two main topics discussed were:</p>
+
+<ul>
+<li><em>“What is Firefox OS and who is it targeting?”</em></li>
+<li><em>“Why should we / our clients put it on our horizon?”</em></li>
+</ul>
+
+
+<h1>Who is it for?</h1>
+
+<p><a href="http://www.mozilla.org/en-US/firefox/os/">Firefox OS</a> is designed for alternative markets. It wants to replace the current feature phones, and give access to smartphones to people who otherwise could not afford it.</p>
+
+<p>A good question was <em>“If you target alternative markets, why don’t you sell the phone in Africa?”</em>.</p>
+
+<p>The answer is that the distribution market is the responsibility of the carriers. They choose where they sell the phone. The phone was recently released in Poland and Hungary.</p>
+
+<h1>Performance</h1>
+
+<p>Most people were actually very curious about the performance, compared to high-end Android devices and the iPhone.</p>
+
+<p>Current low-end devices running Android don’t perform very well at all. Especially if you’re used to work with for example, the iPhone. This is because Android wasn't made to run on these devices.</p>
+
+<p>Because Firefox OS targets these low-end devices, and it is faster than Android, the experience when using Firefox OS is noticeably better.</p>
+
+<p>They brought some devices so we could play around with the OS and see for ourselves. In general, the attendees were quite suprised about how good Firefox OS runs!</p>
+
+<p><img src="/images/posts/meetup-firefox-os-testing.JPG"></p>
+
+<h1>Standards</h1>
+
+<p>The people behind Mozilla also want to push the usage of standards. This was on one of the slides during the presentation:
+<blockquote><p>“Firefox OS application = website + W3C proposed phone APIs”</p></blockquote></p>
+
+<p>That’s great!</p>
+
+<p>The most basic application can actually consist of a single HTML-file. You can style the application with CSS and add extra functionality with JavaScript. They also showed how you can access phone sensors via JavaScript.</p>
+
+<h1>Sensor events</h1>
+
+<p><code>Deviceproximity</code> is an event that allows you to know when something is getting closer or further away from the phone.
+An example usecase for this would be to brighten up the screen when a user gets close enough to the phone.</p>
+
+<p><code>Devicelight</code> is an event that gives you access to the amount of light in the room. For example, you can adjust the colors of you paragraphs when it is getting lighter / darker outside.</p>
+
+<p>These are all basic examples, but I’m looking forward to see what others will do with them. The cool thing is that you listen to these events using pure JavaScript!</p>
+
+<h1>Conclusion</h1>
+
+<p>It was nice to get such an extensive introduction to Firefox OS from the masters themselves. There was a lot of Q&amp;A in between, where the thoughts behind the OS were explained very well.</p>
+
+<p>Note: take a look at this slide at the Q42 office!</p>
+
+<p><img src="/images/posts/meetup-firefox-os-slide.JPG"></p>
+]]></content>
+  </entry>
+  
+</feed>

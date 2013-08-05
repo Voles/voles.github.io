@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Firefox OS: an introduction - Niels Dequeker</title>
+  <meta name="author" content="Niels Dequeker">
+
+  
+  <meta name="description" content="On August 5 I was invited by Remco to join the Firefox OS event at the Q42 office in Amsterdam. It was an great evening. With this blogpost, I’d like &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://voles.github.io/blog/2013/08/05/firefox-os-an-introduction">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Niels Dequeker" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26231173-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Niels Dequeker</a></h1>
+  
+    <h2>When I read what I write I learn what I think</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:voles.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/vim-cheat-sheet">My Vim cheat sheet</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Firefox OS: An Introduction</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-05T22:47:00+02:00" pubdate data-updated="true">Aug 5<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>On August 5 I was invited by <a href="https://twitter.com/remcoder">Remco</a> to join the <a href="https://plus.google.com/u/0/events/ctdip0rot71j36rrkkl4rkto1p0">Firefox OS event</a> at the <a href="http://q42.com/">Q42</a> office in Amsterdam. It was an great evening. With this blogpost, I’d like to share some of the things I’ve learned.</p>
+
+<p><img src="/images/posts/meetup-firefox-os.JPG"></p>
+
+<h1>Discussed topics</h1>
+
+<p>Speakers <a href="https://twitter.com/alispivak">Ali Spivak</a> (projectmanager for the Mozilla Developer Network), <a href="https://twitter.com/sergimansilla">Sergi Mansilla</a> and <a href="https://twitter.com/janjongboom">Jan Jongeboom</a> (who make software for Firefox OS) gave presentations about Firefox OS, a community-based system for mobile devices.</p>
+
+<p>Besides a general introduction, the two main topics discussed were:</p>
+
+<ul>
+<li><em>“What is Firefox OS and who is it targeting?”</em></li>
+<li><em>“Why should we / our clients put it on our horizon?”</em></li>
+</ul>
+
+
+<h1>Who is it for?</h1>
+
+<p><a href="http://www.mozilla.org/en-US/firefox/os/">Firefox OS</a> is designed for alternative markets. It wants to replace the current feature phones, and give access to smartphones to people who otherwise could not afford it.</p>
+
+<p>A good question was <em>“If you target alternative markets, why don’t you sell the phone in Africa?”</em>.</p>
+
+<p>The answer is that the distribution market is the responsibility of the carriers. They choose where they sell the phone. The phone was recently released in Poland and Hungary.</p>
+
+<h1>Performance</h1>
+
+<p>Most people were actually very curious about the performance, compared to high-end Android devices and the iPhone.</p>
+
+<p>Current low-end devices running Android don’t perform very well at all. Especially if you’re used to work with for example, the iPhone. This is because Android wasn&#8217;t made to run on these devices.</p>
+
+<p>Because Firefox OS targets these low-end devices, and it is faster than Android, the experience when using Firefox OS is noticeably better.</p>
+
+<p>They brought some devices so we could play around with the OS and see for ourselves. In general, the attendees were quite suprised about how good Firefox OS runs!</p>
+
+<p><img src="/images/posts/meetup-firefox-os-testing.JPG"></p>
+
+<h1>Standards</h1>
+
+<p>The people behind Mozilla also want to push the usage of standards. This was on one of the slides during the presentation:</p>
+
+<blockquote><p>“Firefox OS application = website + W3C proposed phone APIs”</p></blockquote>
+
+
+<p>That’s great!</p>
+
+<p>The most basic application can actually consist of a single HTML-file. You can style the application with CSS and add extra functionality with JavaScript. They also showed how you can access phone sensors via JavaScript.</p>
+
+<h1>Sensor events</h1>
+
+<p><code>Deviceproximity</code> is an event that allows you to know when something is getting closer or further away from the phone.
+An example usecase for this would be to brighten up the screen when a user gets close enough to the phone.</p>
+
+<p><code>Devicelight</code> is an event that gives you access to the amount of light in the room. For example, you can adjust the colors of you paragraphs when it is getting lighter / darker outside.</p>
+
+<p>These are all basic examples, but I’m looking forward to see what others will do with them. The cool thing is that you listen to these events using pure JavaScript!</p>
+
+<h1>Conclusion</h1>
+
+<p>It was nice to get such an extensive introduction to Firefox OS from the masters themselves. There was a lot of Q&amp;A in between, where the thoughts behind the OS were explained very well.</p>
+
+<p>Note: take a look at this slide at the Q42 office!</p>
+
+<p><img src="/images/posts/meetup-firefox-os-slide.JPG"></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Niels Dequeker</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-05T22:47:00+02:00" pubdate data-updated="true">Aug 5<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/firefox-os/'>Firefox OS</a>, <a class='category' href='/blog/categories/mdn/'>MDN</a>, <a class='category' href='/blog/categories/mozilla/'>Mozilla</a>, <a class='category' href='/blog/categories/q42/'>Q42</a>, <a class='category' href='/blog/categories/event/'>event</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://voles.github.io/blog/2013/08/05/firefox-os-an-introduction/" data-via="ndequeker" data-counturl="http://voles.github.io/blog/2013/08/05/firefox-os-an-introduction/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/06/09/the-first-javascript-mvc-meetup/" title="Previous Post: The first JavaScript MVC Meetup">&laquo; The first JavaScript MVC Meetup</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/08/05/firefox-os-an-introduction/">Firefox OS: an introduction</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/09/the-first-javascript-mvc-meetup/">The first JavaScript MVC Meetup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/25/favourite-mac-utilities/">My favourite Mac Utilities</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/20/getting-started-with-python/">Getting started with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/14/functional-programming/">First steps into Functional Programming</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Niels Dequeker -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'voles';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://voles.github.io/blog/2013/08/05/firefox-os-an-introduction/';
+        var disqus_url = 'http://voles.github.io/blog/2013/08/05/firefox-os-an-introduction/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
