@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tools | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-06T00:05:21+02:00</updated>
+  <updated>2015-07-06T00:23:49+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -32,19 +32,19 @@
 </ul>
 
 
-<p><img src="/images/posts/divvy.png" title="'Divvy screenshot'" ></p>
+<p><img src="/images/posts/divvy.png" title="&lsquo;Divvy screenshot&rsquo;" ></p>
 
 <h2><a href="http://stereopsis.com/flux/" title="f.lux">Flux</a></h2>
 
-<p>f.lux makes your computer screen look like the room you're in, all the time. When the sun sets, it makes your computer look like your indoor lights. In the morning, it makes things look like sunlight again.</p>
+<p>f.lux makes your computer screen look like the room you&rsquo;re in, all the time. When the sun sets, it makes your computer look like your indoor lights. In the morning, it makes things look like sunlight again.</p>
 
-<p><img src="/images/posts/flux.png" title="'Flux screenshot'" ></p>
+<p><img src="/images/posts/flux.png" title="&lsquo;Flux screenshot&rsquo;" ></p>
 
 <h2><a href="http://www.alfredapp.com/" title="Alfred App">Alfred</a></h2>
 
 <p>Alfred is a productivity application for Mac OS X, which aims to save you time in searching your local computer and the web. You can best compare it with the Mac Spotlight on steroids.</p>
 
-<p><img src="/images/posts/alfred.png" title="'Alfred screenshot'" ></p>
+<p><img src="/images/posts/alfred.png" title="&lsquo;Alfred screenshot&rsquo;" ></p>
 ]]></content>
   </entry>
   

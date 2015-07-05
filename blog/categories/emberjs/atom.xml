@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: EmberJS | Niels Dequeker]]></title>
+  <title><![CDATA[Category: emberjs | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/emberjs/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-06T00:05:21+02:00</updated>
+  <updated>2015-07-06T00:23:49+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -18,11 +18,11 @@
     <link href="http://voles.github.io/blog/2013/06/09/the-first-javascript-mvc-meetup/"/>
     <updated>2013-06-09T17:08:00+02:00</updated>
     <id>http://voles.github.io/blog/2013/06/09/the-first-javascript-mvc-meetup</id>
-    <content type="html"><![CDATA[<p>On May 22 we have organized the first JS MVC Meetup in Amsterdam. With this post I'd like to share why we have setup the Meetup, together with some pictures.</p>
+    <content type="html"><![CDATA[<p>On May 22 we have organized the first JS MVC Meetup in Amsterdam. With this post I&rsquo;d like to share why we have setup the Meetup, together with some pictures.</p>
 
 <h3>Why organizing a JS MVC specific Meetup</h3>
 
-<p>Last year I've defined the technology stack for <a href="http://social-express.com/">SocialExpress</a>. I found it very hard to choose the right framework for our client application.</p>
+<p>Last year I&rsquo;ve defined the technology stack for <a href="http://social-express.com/">SocialExpress</a>. I found it very hard to choose the right framework for our client application.</p>
 
 <p>At the end I decided to go for AngularJS because of two reasons:</p>
 
@@ -61,35 +61,35 @@ On the basis of a demo application, we talked about some of the core concepts of
 
 <h4>The location</h4>
 
-<p><img src="/images/posts/meetup-location.jpeg" title="'JS MVC Meetup location'" ></p>
+<p><img src="/images/posts/meetup-location.jpeg" title="&lsquo;JS MVC Meetup location&rsquo;" ></p>
 
 <h4>Ben talking about EmberJS</h4>
 
-<p><img src="/images/posts/meetup-ben.jpeg" title="'JS MVC Meetup Ben about EmberJS'" ></p>
+<p><img src="/images/posts/meetup-ben.jpeg" title="&lsquo;JS MVC Meetup Ben about EmberJS&rsquo;" ></p>
 
 <h4>Prashant talking about SMACSS</h4>
 
-<p><img src="/images/posts/meetup-prashant.jpeg" title="'JS MVC Meetup Prashant about SMACSS'" ></p>
+<p><img src="/images/posts/meetup-prashant.jpeg" title="&lsquo;JS MVC Meetup Prashant about SMACSS&rsquo;" ></p>
 
 <h4>Thijs and me talking about AngularJS</h4>
 
-<p><img src="/images/posts/meetup-thijs-and-niels.jpeg" title="'JS MVC Meetup Niels and Thijs about AngularJS'" ></p>
+<p><img src="/images/posts/meetup-thijs-and-niels.jpeg" title="&lsquo;JS MVC Meetup Niels and Thijs about AngularJS&rsquo;" ></p>
 
 <h4>Short break</h4>
 
-<p><img src="/images/posts/meetup-break.jpeg" title="'JS MVC Meetup short break'" ></p>
+<p><img src="/images/posts/meetup-break.jpeg" title="&lsquo;JS MVC Meetup short break&rsquo;" ></p>
 
 <h2>Room for improvement</h2>
 
 <ul>
-<li>Don't change the date once the Meetup is announced, it gives too much confusion</li>
+<li>Don&rsquo;t change the date once the Meetup is announced, it gives too much confusion</li>
 <li>Do more promotion. Talk about our Meetup at other Meetups, flyer, invite friends… This time the only promotion we had was via Meetup.</li>
 </ul>
 
 
 <h2>Final thoughts</h2>
 
-<p>I really enjoyed the evening and it was great to talk with like minded people. During the break I heard about how others projects are organized and which technologies they use for 'bigger' client applications.</p>
+<p>I really enjoyed the evening and it was great to talk with like minded people. During the break I heard about how others projects are organized and which technologies they use for &lsquo;bigger&rsquo; client applications.</p>
 
 <h2>Next Meetup</h2>
 

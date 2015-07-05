@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sass | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/sass/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-06T00:05:21+02:00</updated>
+  <updated>2015-07-06T00:23:49+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -24,7 +24,7 @@
 
 <p>Recently, one of our teachers told us about <a href="http://sass-lang.com/" title="Sass">Syntactically Awesome Stylesheets (Sass)</a>. It is more or less the same as LESS, the main difference is that LESS uses the CSS syntax and Sass uses its own syntax. But it’s possible to use CSS-syntax with <a href="http://sass-lang.com/docs/yardoc/file.SCSS_FOR_SASS_USERS.html" title="Scss">SCSS</a>.</p>
 
-<p>I was (and still am) very excited about it, and I'd like to share both my experience and knowledge with the rest of the world.</p>
+<p>I was (and still am) very excited about it, and I&rsquo;d like to share both my experience and knowledge with the rest of the world.</p>
 
 <h3>What is Sass?</h3>
 
@@ -42,13 +42,13 @@
 
 <p>To use Sass first create two new folders <code>css</code> and <code>sass</code>. In the same directory, create a file named <code>config.rb</code>. Add these lines to the file:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">css_dir</span> <span class="o">=</span> <span class="s2">&quot;css&quot;</span>
-</span><span class='line'><span class="n">sass_dir</span> <span class="o">=</span> <span class="s2">&quot;sass&quot;</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">css_dir</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">css</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'><span class="n">sass_dir</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">sass</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
 </span><span class='line'><span class="n">output_style</span> <span class="o">=</span> <span class="ss">:compressed</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>The first line refers to the directory were your final CSS-file will be compiled to. The second line tells where your .scss-files are stored.</p>
 
@@ -58,12 +58,12 @@
 
 <p>Now we first have to install Sass and Compass. Type these two commands in the Terminal, to install both Ruby Gems.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo gem install haml
-</span><span class='line'>$ sudo gem install compass</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span><span class='line'>$ sudo gem install compass</span></code></pre></td></tr></table></div></figure></p>
 
-<p>To compile the file, we'll use Terminal. Go to the folder <code>sass</code> we have just created. To change the current directory, type the command <code>cd</code> and then   the path you want to go to. E.g. <code>cd /Applications/MAMP/htdocs/my-first-sass-project</code>.</p>
+<p>To compile the file, we&rsquo;ll use Terminal. Go to the folder <code>sass</code> we have just created. To change the current directory, type the command <code>cd</code> and then   the path you want to go to. E.g. <code>cd /Applications/MAMP/htdocs/my-first-sass-project</code>.</p>
 
 <p>Next, we have to compile the <code>screen.scss-file</code>. We will compile the file using Compass. Use the commando <code>compass compile sass/screen.scss</code> to compile your scss-file.</p>
 
@@ -76,12 +76,12 @@
 <h3>Sass functions</h3>
 
 <p><strong>Variables</strong><br/>
-You can declare variables and use them everywhere in your .scss-file. This can come in handy when you wan to use the same colors over and over again for e.g. headings, links, menu...</p>
+You can declare variables and use them everywhere in your .scss-file. This can come in handy when you wan to use the same colors over and over again for e.g. headings, links, menu&hellip;</p>
 
 <p><strong>Nesting</strong><br/>
 You can write much cleaner CSS-code with nesting.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -94,42 +94,24 @@ You can write much cleaner CSS-code with nesting.</p>
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
 </pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">ul</span><span class="nc">.message</span> <span class="p">{</span>
-</span><span class='line'>  <span class="n">li</span><span class="o">.</span><span class="n">warning</span> <span class="err">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="n">li</span><span class="o">.</span><span class="n">warning</span> <span class="err">{</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="nb">yellow</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">color</span><span class="o">:</span> <span class="nb">yellow</span><span class="p">;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span>  <span class="nt">li</span><span class="nc">.error</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span>  <span class="nt">li</span><span class="nc">.error</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span>  <span class="nt">li</span><span class="nc">.success</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">color</span><span class="o">:</span> <span class="nb">green</span><span class="p">;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span>  <span class="nt">li</span><span class="nc">.success</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="nb">green</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
 </span><span class='line'><span class="err">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p><strong>Mixins</strong><br/>
 Mixins are like functions. You can pass some parameters and it gives you the result you want.
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -159,12 +141,12 @@ Mixins are like functions. You can pass some parameters and it gives you the res
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="o">@</span><span class="n">include</span> <span class="n">makebox</span><span class="p">(</span><span class="m">#00FF00</span><span class="o">,</span> <span class="m">#CCCCCC</span><span class="o">,</span> <span class="m">375</span><span class="p">);</span>
 </span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p><strong>Inheritance</strong><br/>
 It is possible to extend selectors from other selectors.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -184,7 +166,7 @@ It is possible to extend selectors from other selectors.</p>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="o">@</span><span class="n">extend</span> <span class="o">.</span><span class="nb">blue</span><span class="p">;</span>
 </span><span class='line'>  <span class="k">width</span><span class="o">:</span> <span class="m">160px</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>If you like what you see, be sure to take a look at these resources to learn Sass. The most complicated part is installing / compiling the files. Most other things speak for themselves.</p>
 
@@ -197,7 +179,7 @@ It is possible to extend selectors from other selectors.</p>
 </ul>
 
 
-<p>Feel free to leave a comment with your thoughts on Sass. I hope you've enjoyed this one!</p>
+<p>Feel free to leave a comment with your thoughts on Sass. I hope you&rsquo;ve enjoyed this one!</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tutorial | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-06T00:05:21+02:00</updated>
+  <updated>2015-07-06T00:23:49+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -18,7 +18,7 @@
     <link href="http://voles.github.io/blog/2013/04/20/getting-started-with-python/"/>
     <updated>2013-04-20T15:59:00+02:00</updated>
     <id>http://voles.github.io/blog/2013/04/20/getting-started-with-python</id>
-    <content type="html"><![CDATA[<p>It's been a while now since I've written my first line of Python code. With this blogpost I'd like to share some knowledge, to make it easier for others to get started with Python. I assume you have some basic experience with the command line, and know what unittests are for.</p>
+    <content type="html"><![CDATA[<p>It&rsquo;s been a while now since I&rsquo;ve written my first line of Python code. With this blogpost I&rsquo;d like to share some knowledge, to make it easier for others to get started with Python. I assume you have some basic experience with the command line, and know what unittests are for.</p>
 
 <p>Note: the commands below are written for Mac OSX</p>
 
@@ -38,40 +38,40 @@
 
 <p>You can install all of the dependencies globally, although thats not recommended. Once you switch to an other machine, or if you work in team, you have to make sure all the right version of each external library is installed.</p>
 
-<p>Let's get started. First of all we install the right tools to set up an environment.</p>
+<p>Let&rsquo;s get started. First of all we install the right tools to set up an environment.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pip install virtualenv
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
-<p>Next we create a new environment named 'my-environment', using the command <code>virtualenv</code>.</p>
+<p>Next we create a new environment named &lsquo;my-environment&rsquo;, using the command <code>virtualenv</code>.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>mkdir ~/Documents/environments/
 </span><span class='line'><span class="nv">$ </span><span class="nb">cd</span> ~/Documents/environments/
-</span><span class='line'><span class="nv">$ </span>virtualenv my-environment --no-site-packages
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span><span class='line'><span class="nv">$ </span>virtualenv my-environment <span class="p">&amp;</span>ndash<span class="p">;</span>no-site-packages
+</span></code></pre></td></tr></table></div></figure></p>
 
-<p>Now we can create a link to it, so we don't have to type the full path everytime we want to use the environment.</p>
+<p>Now we can create a link to it, so we don&rsquo;t have to type the full path everytime we want to use the environment.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>ln -s ~/Documents/environments/my-environment/bin/python /usr/bin/my-environment
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
-<p>When you execute <code>$ my-environment</code>, you can immediately start writing code. Let's print something to the Terminal with <code>print "Hello, World!"</code>. When you write <code>2 + 3</code>, you will get <code>5</code> as a result.</p>
+<p>When you execute <code>$ my-environment</code>, you can immediately start writing code. Let&rsquo;s print something to the Terminal with <code>print "Hello, World!"</code>. When you write <code>2 + 3</code>, you will get <code>5</code> as a result.</p>
 
-<p>That's it, you just evaluated your first two expressions in Python. Now we have our own Python environment where we can install and update all of the dependencies.</p>
+<p>That&rsquo;s it, you just evaluated your first two expressions in Python. Now we have our own Python environment where we can install and update all of the dependencies.</p>
 
 <p>Writing your code directly in the Terminal is of course not recommended when you want to write serious programs.
-Let's make a project for this environment.</p>
+Let&rsquo;s make a project for this environment.</p>
 
 <h2>Project setup</h2>
 
 <p>Go to the project folder and create a file named <code>math.py</code> with the following content.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -97,10 +97,10 @@ Let's make a project for this environment.</p>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;-&lt;</span><span class="n">em</span><span class="o">&gt;-</span> <span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="o">-</span><span class="mi">8</span> <span class="o">-&lt;/</span><span class="n">em</span><span class="o">&gt;-&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="s">&#39;&#39;&#39;</span>
-</span><span class='line'><span class="s">[2013] Niels Dequeker</span>
-</span><span class='line'><span class="s"> All Rights Reserved.</span>
-</span><span class='line'><span class="s">&#39;&#39;&#39;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span>
+</span><span class='line'><span class="p">[</span><span class="mi">2013</span><span class="p">]</span> <span class="n">Niels</span> <span class="n">Dequeker</span>
+</span><span class='line'> <span class="n">All</span> <span class="n">Rights</span> <span class="n">Reserved</span><span class="o">.</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">class</span> <span class="nc">Math</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
@@ -115,13 +115,13 @@ Let's make a project for this environment.</p>
 </span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>This is how we write a basic class in Python. It has three methods, <code>sum</code>, <code>times</code> and <code>divide</code>.</p>
 
 <p>Now we can write some unittests to validate our code. Create a file named <code>tests.py</code> with the following content.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -149,18 +149,14 @@ Let's make a project for this environment.</p>
 <span class='line-number'>26</span>
 <span class='line-number'>27</span>
 <span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
 </pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;-&lt;</span><span class="n">em</span><span class="o">&gt;-</span> <span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="o">-</span><span class="mi">8</span> <span class="o">-&lt;/</span><span class="n">em</span><span class="o">&gt;-&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="s">&#39;&#39;&#39;</span>
-</span><span class='line'><span class="s">[2012] SocialExpress</span>
-</span><span class='line'><span class="s"> All Rights Reserved.</span>
-</span><span class='line'><span class="s">&#39;&#39;&#39;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span>
+</span><span class='line'><span class="p">[</span><span class="mi">2012</span><span class="p">]</span> <span class="n">SocialExpress</span>
+</span><span class='line'> <span class="n">All</span> <span class="n">Rights</span> <span class="n">Reserved</span><span class="o">.</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
 </span><span class='line'><span class="kn">import</span> <span class="nn">unittest</span>
 </span><span class='line'><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">Math</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
@@ -179,60 +175,45 @@ Let's make a project for this environment.</p>
 </span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;Incorrect division&#39;</span><span class="p">)</span>
 </span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">==</span> <span class="s">&quot;&lt;strong&gt;main&lt;/strong&gt;&quot;</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">==</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">main</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;&amp;</span><span class="n">rdquo</span><span class="p">;:</span>
+</span><span class='line'>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
-<p>Let's go through the code step by step.</p>
+<p>Let&rsquo;s go through the code step by step.</p>
 
-<p>First of all we import our dependencies. <code>Math</code> is our own class that we've created before.</p>
+<p>First of all we import our dependencies. <code>Math</code> is our own class that we&rsquo;ve created before.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">unittest</span>
 </span><span class='line'><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">Math</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Next is the class definition for the test. It extends from <code>unittest.TestCase</code>.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">class</span> <span class="nc">Test</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
-<p>Now what follows are the methods. Each one is testing one functionality of our <code>Math</code> class. We check the return values with <code>assertTrue</code> and get an exception when these aren't what we expected.</p>
+<p>Now what follows are the methods. Each one is testing one functionality of our <code>Math</code> class. We check the return values with <code>assertTrue</code> and get an exception when these aren&rsquo;t what we expected.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">test_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>    <span class="n">math</span> <span class="o">=</span> <span class="n">Math</span><span class="p">()</span>
-</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&#39;Incorrect sum&#39;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-</code></pre>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">test_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">math</span> <span class="o">=</span> <span class="n">Math</span><span class="p">()</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">Incorrect</span> <span class="nb">sum</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;)</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Finally, we define that if the <code>tests.py</code> file is executed directly, it has to execute our tests.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">if</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">==</span> <span class="s">&quot;&lt;strong&gt;main&lt;/strong&gt;&quot;</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">if</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">==</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">main</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;&amp;</span><span class="n">rdquo</span><span class="p">;:</span>
+</span><span class='line'>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
-<p>That's it. We can run our code in the Terminal with <code>$ my-environment tests.py</code>. You should see <code>Ran 3 tests</code>, which mean your code works as expected.</p>
+<p>That&rsquo;s it. We can run our code in the Terminal with <code>$ my-environment tests.py</code>. You should see <code>Ran 3 tests</code>, which mean your code works as expected.</p>
 
 <h2>Further reference</h2>
 
@@ -254,25 +235,25 @@ Let's make a project for this environment.</p>
 
 <p>At first, you have to add two event listeners to the component, <code>NATIVE_DRAG_ENTER</code> and <code>NATIVE_DRAG_DROP</code>. Both of them are <code>NativeDragEvents</code>.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="n">addEventListener</span><span class="o">(</span><span class="n">NativeDragEvents</span><span class="o">.</span> <span class="n">NATIVE_DRAG_ENTER</span><span class="o">,</span> <span class="n">nativedragenterHandler</span><span class="o">);</span>
 </span><span class='line'><span class="n">addEventListener</span><span class="o">(</span><span class="n">NativeDragEvents</span><span class="o">.</span> <span class="n">NATIVE_DRAG_DROP</span><span class="o">,</span> <span class="n">nativedragdropHandler</span><span class="o">);</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>The <code>nativedragenterHandler</code> will be triggered whenever a user hovers the component with one or more files selected. The <code>nativedragdropHandler</code> will be triggered when the user ‘drops’ his files on this component.</p>
 
 <p>Put this code in the <code>nativedragenterHandler</code>, to let the component accept a user to drop his files here.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="n">DragManager</span><span class="o">.</span><span class="na">acceptDragDrop</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Everything else happens in the <code>nativedragdropHandler</code>. The code below shows you how to fetch the dropped files, so you can work with them in the application.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="kd">var</span> <span class="n">droppedFiles</span><span class="p">:</span><span class="kt">Array</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="na">clipboard</span><span class="o">.</span><span class="na">getData</span><span class="o">(</span><span class="n">ClipboardFormats</span><span class="o">.</span><span class="na">FILE_LIST_FORMAT</span><span class="o">)</span> <span class="k">as</span> <span class="n">Array</span><span class="o">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 ]]></content>
   </entry>
   
@@ -287,11 +268,11 @@ Let's make a project for this environment.</p>
 
 <p>You will see a dialog where you can fill in your project details. Fill in your <em>Project name</em> and press the <em>Next</em> button.</p>
 
-<p><img src="/images/posts/project-name.png" title="'Project name'" ></p>
+<p><img src="/images/posts/project-name.png" title="&lsquo;Project name&rsquo;" ></p>
 
 <p>Change the <em>Main application file</em> to <em>Main.as</em>, this is just a convention. Press finish to complete your project setup.</p>
 
-<p><img src="/images/posts/main-application-file.png" title="'Main application file'" ></p>
+<p><img src="/images/posts/main-application-file.png" title="&lsquo;Main application file&rsquo;" ></p>
 
 <h2>Flash Library</h2>
 
@@ -299,15 +280,15 @@ Let's make a project for this environment.</p>
 
 <p>Make a new .fla-file and make a MovieClip with a very basic drawing in it. Go to the properties of the MovieClip.</p>
 
-<p>Tick <em>Export for ActionScript</em> and change the classname (‘Class’) to 'SimpleShape’. You schould have something like this:</p>
+<p>Tick <em>Export for ActionScript</em> and change the classname (‘Class’) to &lsquo;SimpleShape’. You schould have something like this:</p>
 
-<p><img src="/images/posts/mc-properties.png" title="'MovieClip properties'" ></p>
+<p><img src="/images/posts/mc-properties.png" title="&lsquo;MovieClip properties&rsquo;" ></p>
 
 <p>Because we want to use the library of this .fla-file with Flash Builder, we have to make a .swc-file. You can learn more about .swc-files in this <a href="http://stackoverflow.com/questions/1340866/what-is-a-flash-swc-file-and-how-is-it-used" title="Stackoverflow question, what is swc and how is it used">Stackoverflow question</a>.</p>
 
 <p>To let your .fla-file generate a .swc-file, go to <em>File</em> <strong>→</strong> <em>Publish Settings</em>. Next, go to the <em>Flash</em>-tab and thick <em>Export SWC</em>.</p>
 
-<p><img src="/images/posts/publish-settings.png" title="'Publish settings'" ></p>
+<p><img src="/images/posts/publish-settings.png" title="&lsquo;Publish settings&rsquo;" ></p>
 
 <p>Press the <em>OK</em>-button. Every time you change something in your .swf-file, you will have to publish your .swc-file again to make sure it contains the latest updates of your library. You can generate a .swc-file with the shortcut <em>command + return</em>.</p>
 
@@ -315,17 +296,17 @@ Let's make a project for this environment.</p>
 
 <p>Go back to Flash Builder and make a new folder named ‘libs’ in your project. Here you can put all your resources for the project. The structure of your project should look like this:</p>
 
-<p><img src="/images/posts/project-structure.png" title="'Project structure'" ></p>
+<p><img src="/images/posts/project-structure.png" title="&lsquo;Project structure&rsquo;" ></p>
 
 <p>Go back to the Flash IDE and save your .fla-file in the folder <em>libs</em> you have just created in your Flash Builder project. The location of your project depends on your workspace in Flash Builder.</p>
 
 <p>Save the .fla-file as <em>library.fla</em> and again create a .swc-file (<em>command + return</em>). Go back to Flash Builder and your project structure now should look like this:</p>
 
-<p><img src="/images/posts/libs-folder.png" title="'Libs folder'" ></p>
+<p><img src="/images/posts/libs-folder.png" title="&lsquo;Libs folder&rsquo;" ></p>
 
 <p>Now we must let the project know that he can use the .swc-files in the <em>libs</em>-folder. Right-click on the name of the project, go to <em>Properties</em>. Go to the <em>ActionScript Build Path</em>-tab and then to the <em>Library path</em>-view. Click <em>Add SWC Folder</em> and select your <em>libs</em>-folder. You should see this:</p>
 
-<p><img src="/images/posts/build-path.png" title="'Actionscript build path'" ></p>
+<p><img src="/images/posts/build-path.png" title="&lsquo;Actionscript build path&rsquo;" ></p>
 
 <p>Now your .swc-file is linked with your Flash Builder project, click <em>Ok</em>.</p>
 
@@ -335,7 +316,7 @@ Let's make a project for this environment.</p>
 
 <p>In the constructor of your Main.as, add these lines of code:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -350,38 +331,26 @@ Let's make a project for this environment.</p>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
 </pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="c1">// stage</span>
 </span><span class='line'><span class="n">stage</span><span class="o">.</span><span class="na">scaleMode</span> <span class="o">=</span> <span class="n">StageScaleMode</span><span class="o">.</span><span class="na">NO_SCALE</span><span class="o">;</span>
 </span><span class='line'><span class="n">stage</span><span class="o">.</span><span class="na">align</span> <span class="o">=</span> <span class="n">StageAlign</span><span class="o">.</span><span class="na">TOP_LEFT</span><span class="o">;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">(</span><span class="n">loaderInfo</span><span class="o">.</span><span class="na">bytesLoaded</span> <span class="o">&gt;</span> <span class="n">loaderInfo</span><span class="o">.</span><span class="na">bytesTotal</span><span class="o">)</span>
-</span><span class='line'><span class="o">{&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;//</span> <span class="n">swf</span> <span class="k">is</span> <span class="n">already</span> <span class="n">loaded</span>
-</span><span class='line'><span class="n">preloaderCompleteHandler</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;}</span>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>    <span class="c1">// swf is already loaded</span>
+</span><span class='line'>    <span class="n">preloaderCompleteHandler</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
 </span><span class='line'><span class="k">else</span>
-</span><span class='line'><span class="o">{&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;//</span> <span class="n">preloader</span> <span class="n">methods</span>
-</span><span class='line'><span class="n">loaderInfo</span><span class="o">.</span><span class="na">addEventListener</span><span class="o">(</span><span class="n">Event</span><span class="o">.</span><span class="na">COMPLETE</span><span class="o">,</span> <span class="n">preloaderCompleteHandler</span><span class="o">);</span>
-</span><span class='line'><span class="n">loaderInfo</span><span class="o">.</span><span class="na">addEventListener</span><span class="o">(</span><span class="n">ProgressEvent</span><span class="o">.</span><span class="na">PROGRESS</span><span class="o">,</span> <span class="n">preloaderProgressHandler</span><span class="o">);</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>    <span class="c1">// preloader methods</span>
+</span><span class='line'>    <span class="n">loaderInfo</span><span class="o">.</span><span class="na">addEventListener</span><span class="o">(</span><span class="n">Event</span><span class="o">.</span><span class="na">COMPLETE</span><span class="o">,</span> <span class="n">preloaderCompleteHandler</span><span class="o">);</span>
+</span><span class='line'>    <span class="n">loaderInfo</span><span class="o">.</span><span class="na">addEventListener</span><span class="o">(</span><span class="n">ProgressEvent</span><span class="o">.</span><span class="na">PROGRESS</span><span class="o">,</span> <span class="n">preloaderProgressHandler</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>We look at the loaderInfo of the SWF tho check if all data is loaded. If not, we add two eventlisteners to the loaderInfo. Next, add these functions to the Main-class:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -396,19 +365,13 @@ Let's make a project for this environment.</p>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
 </pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="o">/&lt;</span><span class="n">em</span><span class="o">&gt;*</span>
 </span><span class='line'> <span class="o">*</span> <span class="n">Preloader</span> <span class="n">progress</span>
 </span><span class='line'> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;/</span>
 </span><span class='line'><span class="kd">private</span> <span class="kd">function </span><span class="nf">preloaderProgressHandler</span><span class="o">(</span><span class="n">event</span><span class="o">:</span><span class="kt">ProgressEvent</span><span class="o">):</span><span class="kt">void</span>
-</span><span class='line'><span class="o">{&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nf">trace</span><span class="o">(</span><span class="s2">&quot;Preloader progress: &quot;</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="na">round</span><span class="o">((</span><span class="n">event</span><span class="o">.</span><span class="na">bytesLoaded</span> <span class="o">/</span> <span class="n">event</span><span class="o">.</span><span class="na">bytesTotal</span><span class="o">)</span> <span class="o">*</span> <span class="mi">100</span><span class="o">)</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="o">);</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;}&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>    <span class="nf">trace</span><span class="o">(&amp;</span><span class="n">ldquo</span><span class="o">;</span><span class="n">Preloader</span> <span class="n">progress</span><span class="o">:</span> <span class="o">&amp;</span><span class="n">rdquo</span><span class="o">;</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="na">round</span><span class="o">((</span><span class="n">event</span><span class="o">.</span><span class="na">bytesLoaded</span> <span class="o">/</span> <span class="n">event</span><span class="o">.</span><span class="na">bytesTotal</span><span class="o">)</span> <span class="o">*</span> <span class="mi">100</span><span class="o">)</span> <span class="o">+</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="o">;%&amp;</span><span class="n">rdquo</span><span class="o">;);</span>
+</span><span class='line'><span class="o">}&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;/&lt;</span><span class="n">em</span><span class="o">&gt;*</span>
 </span><span class='line'> <span class="o">*</span> <span class="n">Preloader</span> <span class="n">complete</span>
@@ -417,7 +380,7 @@ Let's make a project for this environment.</p>
 </span><span class='line'><span class="o">{&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>The progress-function contains some simple math to trace the progress of the preloader. You can also use this value so visualise the progress.</p>
 
@@ -429,15 +392,15 @@ Let's make a project for this environment.</p>
 
 <p>To make this work, we first have to make a second class, I name it ‘Application.as’ and put it in a package named ‘be.devine’.</p>
 
-<p>Again, right click on your Flash Builder project and go to ‘Properties’. In the ‘ActionScript Compiler’-tab, put this in the ‘Additional compiler arguments’: “-frame "start" be.devine.Application”. This creates a second frame for your project. You should have this:</p>
+<p>Again, right click on your Flash Builder project and go to ‘Properties’. In the ‘ActionScript Compiler’-tab, put this in the ‘Additional compiler arguments’: “-frame &ldquo;start&rdquo; be.devine.Application”. This creates a second frame for your project. You should have this:</p>
 
-<p><img src="/images/posts/compiler-arguments.png" title="'Additional compiler arguments'" ></p>
+<p><img src="/images/posts/compiler-arguments.png" title="&lsquo;Additional compiler arguments&rsquo;" ></p>
 
 <p>Go to your Main.as class and change the superclass to ‘MovieClip’ instead of Sprite. You have to do this because we want multiple frames (one frame for the preloader and a second frame for the application itself) and a Sprite doesn’t have a timeline.</p>
 
 <p>The last thing we have to write is the preloaderCompleteHandler. Add these lines to the function:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -447,15 +410,15 @@ Let's make a project for this environment.</p>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 </pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="c1">// go to second frame</span>
-</span><span class='line'><span class="n">gotoAndStop</span><span class="o">(</span><span class="s2">&quot;start&quot;</span><span class="o">);&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'><span class="n">gotoAndStop</span><span class="o">(&amp;</span><span class="n">ldquo</span><span class="o">;</span><span class="n">start</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="o">;);&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;//</span> <span class="n">application</span> <span class="n">classname</span>
-</span><span class='line'><span class="n">var</span> <span class="n">applicationClass</span><span class="o">:*</span> <span class="o">=</span> <span class="n">getDefinitionByName</span><span class="o">(</span><span class="s2">&quot;be.devine.Application&quot;</span><span class="o">);&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'><span class="n">var</span> <span class="n">applicationClass</span><span class="o">:*</span> <span class="o">=</span> <span class="n">getDefinitionByName</span><span class="o">(&amp;</span><span class="n">ldquo</span><span class="o">;</span><span class="n">be</span><span class="o">.</span><span class="na">devine</span><span class="o">.</span><span class="na">Application</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="o">;);&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;//</span> <span class="n">make</span> <span class="n">the</span> <span class="n">application</span>
 </span><span class='line'><span class="n">var</span> <span class="n">application</span><span class="o">:*</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">applicationClass</span><span class="o">();</span>
 </span><span class='line'><span class="n">addChild</span><span class="o">(</span><span class="n">application</span><span class="o">);</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>You see I’ve used the asterisk, this is used like a ‘joker’. So the ‘application’ variable can be any class, but is doesn’t make a explicit reference to the Application-class. This makes sure the that the SWF will not wait until the Application-class is loaded before showing up the preloader.</p>
 
@@ -469,7 +432,7 @@ Let's make a project for this environment.</p>
 
 <p>You can download <a href="/downloads/MyFirstActionscriptProject.zip">the example project</a> and play around with it.</p>
 
-<p>I hope you learned something from this. Please, do not hesitate to comment with your opinion, doubts, feedback...</p>
+<p>I hope you learned something from this. Please, do not hesitate to comment with your opinion, doubts, feedback&hellip;</p>
 ]]></content>
   </entry>
   

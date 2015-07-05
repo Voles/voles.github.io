@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Q42 | Niels Dequeker]]></title>
+  <title><![CDATA[Category: q42 | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/q42/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-06T00:05:21+02:00</updated>
+  <updated>2015-07-06T00:23:49+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -46,7 +46,7 @@
 
 <p>Most people were actually very curious about the performance, compared to high-end Android devices and the iPhone.</p>
 
-<p>Current low-end devices running Android don’t perform very well at all. Especially if you’re used to work with for example, the iPhone. This is because Android wasn't made to run on these devices.</p>
+<p>Current low-end devices running Android don’t perform very well at all. Especially if you’re used to work with for example, the iPhone. This is because Android wasn&rsquo;t made to run on these devices.</p>
 
 <p>Because Firefox OS targets these low-end devices, and it is faster than Android, the experience when using Firefox OS is noticeably better.</p>
 

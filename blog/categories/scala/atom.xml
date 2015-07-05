@@ -4,7 +4,7 @@
   <title><![CDATA[Category: scala | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/scala/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-06T00:05:21+02:00</updated>
+  <updated>2015-07-06T00:23:49+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -26,7 +26,7 @@ What takes most of my time are the weekly assignments. Usually I solve the probl
 
 <h3>What is Functional Programming</h3>
 
-<p>There are three main programming paradigms. A paradigm describes distinct concepts or thought patterns in some scientific discipline. I'll briefly describe two of them below.</p>
+<p>There are three main programming paradigms. A paradigm describes distinct concepts or thought patterns in some scientific discipline. I&rsquo;ll briefly describe two of them below.</p>
 
 <h4>Imperative programming</h4>
 
@@ -55,7 +55,7 @@ But ever since I’ve started to work with Python, I’ve got in touch with <a h
 
 <h3>Personal experience</h3>
 
-<p>With what I've learned, I found out that I could apply these FP concepts throughout most of my code. Still four weeks to go on the course, but the more I learn about it, the more it fascinates me.</p>
+<p>With what I&rsquo;ve learned, I found out that I could apply these FP concepts throughout most of my code. Still four weeks to go on the course, but the more I learn about it, the more it fascinates me.</p>
 
 <p>Learning Functional Programming really feels like a great step forward to me.</p>
 

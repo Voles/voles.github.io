@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Setting up a AS3 project with Flash Builder - Niels Dequeker</title>
+  <title>Setting Up a AS3 Project With Flash Builder - Niels Dequeker</title>
   <meta name="author" content="Niels Dequeker">
 
   
@@ -18,13 +18,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://voles.github.io/blog/2011/07/14/setting-up-a-as3-project-with-flash-builder">
+  <link rel="canonical" href="http://voles.github.io/blog/2011/07/14/setting-up-a-as3-project-with-flash-builder/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Niels Dequeker" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -62,7 +62,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:voles.github.io" />
+    <input type="hidden" name="sitesearch" value="voles.github.io">
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -90,16 +90,10 @@
 
 
 
-
-
-
-
-  
-
-
-<time datetime="2011-07-14T20:03:00+02:00" pubdate data-updated="true">Jul 14<span>th</span>, 2011</time>
+<time class='entry-date' datetime='2011-07-14T20:03:00+02:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>14</span><span class='date-suffix'>th</span>, <span class='date-year'>2011</span></span> <span class='time'>8:03 pm</span></time>
         
-         | <a href="#disqus_thread">Comments</a>
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://voles.github.io">Comments</a>
         
       </p>
     
@@ -124,7 +118,7 @@
 
 <p>Make a new .fla-file and make a MovieClip with a very basic drawing in it. Go to the properties of the MovieClip.</p>
 
-<p>Tick <em>Export for ActionScript</em> and change the classname (‘Class’) to &#8216;SimpleShape’. You schould have something like this:</p>
+<p>Tick <em>Export for ActionScript</em> and change the classname (‘Class’) to &lsquo;SimpleShape’. You schould have something like this:</p>
 
 <p><img src="/images/posts/mc-properties.png" title="'MovieClip properties'" ></p>
 
@@ -160,7 +154,7 @@
 
 <p>In the constructor of your Main.as, add these lines of code:</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -195,7 +189,7 @@
 
 <p>We look at the loaderInfo of the SWF tho check if all data is loaded. If not, we add two eventlisteners to the loaderInfo. Next, add these functions to the Main-class:</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -238,7 +232,7 @@
 
 <p>To make this work, we first have to make a second class, I name it ‘Application.as’ and put it in a package named ‘be.devine’.</p>
 
-<p>Again, right click on your Flash Builder project and go to ‘Properties’. In the ‘ActionScript Compiler’-tab, put this in the ‘Additional compiler arguments’: “-frame &#8220;start&#8221; be.devine.Application”. This creates a second frame for your project. You should have this:</p>
+<p>Again, right click on your Flash Builder project and go to ‘Properties’. In the ‘ActionScript Compiler’-tab, put this in the ‘Additional compiler arguments’: “-frame &ldquo;start&rdquo; be.devine.Application”. This creates a second frame for your project. You should have this:</p>
 
 <p><img src="/images/posts/compiler-arguments.png" title="'Additional compiler arguments'" ></p>
 
@@ -246,7 +240,7 @@
 
 <p>The last thing we have to write is the preloaderCompleteHandler. Add these lines to the function:</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -279,7 +273,7 @@
 
 <p>You can download <a href="/downloads/MyFirstActionscriptProject.zip">the example project</a> and play around with it.</p>
 
-<p>I hope you learned something from this. Please, do not hesitate to comment with your opinion, doubts, feedback&#8230;</p>
+<p>I hope you learned something from this. Please, do not hesitate to comment with your opinion, doubts, feedback&hellip;</p>
 </div>
 
 
@@ -295,19 +289,12 @@
 
 
 
-
-
-
-
-  
-
-
-<time datetime="2011-07-14T20:03:00+02:00" pubdate data-updated="true">Jul 14<span>th</span>, 2011</time>
+<time class='entry-date' datetime='2011-07-14T20:03:00+02:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>14</span><span class='date-suffix'>th</span>, <span class='date-year'>2011</span></span> <span class='time'>8:03 pm</span></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/as3/'>AS3</a>, <a class='category' href='/blog/categories/flash-builder/'>Flash Builder</a>, <a class='category' href='/blog/categories/tutorial/'>tutorial</a>
+    <a class='category' href='/blog/categories/as3/'>as3</a>, <a class='category' href='/blog/categories/flash-builder/'>flash builder</a>, <a class='category' href='/blog/categories/tutorial/'>tutorial</a>
   
 </span>
 
@@ -316,7 +303,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://voles.github.io/blog/2011/07/14/setting-up-a-as3-project-with-flash-builder/" data-via="ndequeker" data-counturl="http://voles.github.io/blog/2011/07/14/setting-up-a-as3-project-with-flash-builder/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://voles.github.io/blog/2011/07/14/setting-up-a-as3-project-with-flash-builder/" data-via="ndequeker" data-counturl="http://voles.github.io/blog/2011/07/14/setting-up-a-as3-project-with-flash-builder/" >Tweet</a>
   
   
   
@@ -349,23 +336,23 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/08/05/firefox-os-an-introduction/">Firefox OS: an introduction</a>
+        <a href="/blog/2013/08/05/firefox-os-an-introduction/">Firefox OS: An Introduction</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/06/09/the-first-javascript-mvc-meetup/">The first JavaScript MVC Meetup</a>
+        <a href="/blog/2013/06/09/the-first-javascript-mvc-meetup/">The First JavaScript MVC Meetup</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/04/25/favourite-mac-utilities/">My favourite Mac Utilities</a>
+        <a href="/blog/2013/04/25/favourite-mac-utilities/">My Favourite Mac Utilities</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/04/20/getting-started-with-python/">Getting started with Python</a>
+        <a href="/blog/2013/04/20/getting-started-with-python/">Getting Started With Python</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/04/14/functional-programming/">First steps into Functional Programming</a>
+        <a href="/blog/2013/04/14/functional-programming/">First Steps Into Functional Programming</a>
       </li>
     
   </ul>
@@ -400,7 +387,7 @@
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -416,7 +403,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
