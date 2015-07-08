@@ -4,7 +4,7 @@
   <title><![CDATA[Category: meetup | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/meetup/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-06T00:23:49+02:00</updated>
+  <updated>2015-07-08T19:56:07+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -61,23 +61,23 @@ On the basis of a demo application, we talked about some of the core concepts of
 
 <h4>The location</h4>
 
-<p><img src="/images/posts/meetup-location.jpeg" title="&lsquo;JS MVC Meetup location&rsquo;" ></p>
+<p>{% img /images/posts/meetup-location.jpeg &lsquo;JS MVC Meetup location&rsquo; %}</p>
 
 <h4>Ben talking about EmberJS</h4>
 
-<p><img src="/images/posts/meetup-ben.jpeg" title="&lsquo;JS MVC Meetup Ben about EmberJS&rsquo;" ></p>
+<p>{% img /images/posts/meetup-ben.jpeg &lsquo;JS MVC Meetup Ben about EmberJS&rsquo; %}</p>
 
 <h4>Prashant talking about SMACSS</h4>
 
-<p><img src="/images/posts/meetup-prashant.jpeg" title="&lsquo;JS MVC Meetup Prashant about SMACSS&rsquo;" ></p>
+<p>{% img /images/posts/meetup-prashant.jpeg &lsquo;JS MVC Meetup Prashant about SMACSS&rsquo; %}</p>
 
 <h4>Thijs and me talking about AngularJS</h4>
 
-<p><img src="/images/posts/meetup-thijs-and-niels.jpeg" title="&lsquo;JS MVC Meetup Niels and Thijs about AngularJS&rsquo;" ></p>
+<p>{% img /images/posts/meetup-thijs-and-niels.jpeg &lsquo;JS MVC Meetup Niels and Thijs about AngularJS&rsquo; %}</p>
 
 <h4>Short break</h4>
 
-<p><img src="/images/posts/meetup-break.jpeg" title="&lsquo;JS MVC Meetup short break&rsquo;" ></p>
+<p>{% img /images/posts/meetup-break.jpeg &lsquo;JS MVC Meetup short break&rsquo; %}</p>
 
 <h2>Room for improvement</h2>
 

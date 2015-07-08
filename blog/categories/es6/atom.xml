@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: es6 | Niels Dequeker]]></title>
+  <link href="http://voles.github.io/blog/categories/es6/atom.xml" rel="self"/>
+  <link href="http://voles.github.io/"/>
+  <updated>2015-07-08T19:56:07+02:00</updated>
+  <id>http://voles.github.io/</id>
+  <author>
+    <name><![CDATA[Niels Dequeker]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Exploring ECMAScript 6]]></title>
+    <link href="http://voles.github.io/blog/2015/07/08/exploring-es6/"/>
+    <updated>2015-07-08T19:44:05+02:00</updated>
+    <id>http://voles.github.io/blog/2015/07/08/exploring-es6</id>
+    <content type="html"><![CDATA[<p>On July 2nd, ECMA published the <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">press release for ECMAScript&reg; 2015</a>.</p>
+
+<p>I’ve been experimenting with some of the new features of the language.</p>
+
+<p>TODO: opzet experimenten repo + waarom transpilen naar ES5</p>
+
+<h1>New String features</h1>
+
+<p>New methods like <code>startsWith()</code> and <code>includes()</code> provide a much more natural to work with strings.
+They are much more readable than doing the same checks using <code>indexOf()</code>.</p>
+
+<p>Note that these methods are case sensitive, as <a href="">I found out while experimenting</a>.</p>
+
+<p>TODO: multiline strings</p>
+
+<p>TODO: string concatenation with substitutes (<a href="https://leanpub.com/understandinges6/read/#leanpub-auto-arrow-functions#leanpub-auto-substitutions">https://leanpub.com/understandinges6/read/#leanpub-auto-arrow-functions#leanpub-auto-substitutions</a>)</p>
+
+<h1>Functions</h1>
+
+<p>Functions can now take named parameters, which can have default values.
+When you execute the <code>doGreeting()</code> function below without passing a value, it’s default output will be <code>Hi!</code></p>
+
+<pre><code>function doGreeting(greeting = ‘Hi!’) {
+    console.log(greeting);
+}
+</code></pre>
+
+<p>It’s now also possible to use <em>Arrow Functions</em>. This is basically a new syntax to write functions, with a <a href="https://leanpub.com/understandinges6/read/#leanpub-auto-arrow-functions">few differences</a>.</p>
+
+<p>The example code below defines function <code>sayIt</code>, which takes one parameter <code>it</code>.</p>
+
+<pre><code>var sayIt = it =&gt; console.log(it);
+sayIt('Yo');
+</code></pre>
+
+<p>I’ve worked with Python before, where terms as list comprehension and generators are commonly used.
+Good news, generators are now part of ECMAScript 6!</p>
+
+<p>A simple example is the <code>alphabetGenerator()</code>.</p>
+
+<pre><code>function *alphabetGenerator() {
+    yield 'A';
+      yield 'B';
+        yield 'C';
+}
+</code></pre>
+
+<p>A working example can be found on line x of the <a href="">ES6 experiments</a>.</p>
+
+<p><a href="http://www.2ality.com/2015/04/deploying-es6.html">http://www.2ality.com/2015/04/deploying-es6.html</a></p>
+]]></content>
+  </entry>
+  
+</feed>

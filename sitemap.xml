@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://voles.github.io/blog/2015/07/08/exploring-es6/</loc>
+    <lastmod>2015-07-08T19:44:05+02:00</lastmod>
+  </url>
+  <url>
     <loc>http://voles.github.io/blog/2013/08/05/firefox-os-an-introduction/</loc>
     <lastmod>2013-08-05T22:47:00+02:00</lastmod>
   </url>
@@ -133,5 +137,20 @@
   </url>
   <url>
     <loc>http://voles.github.io/blog/categories/q42/</loc>
+  </url>
+  <url>
+    <loc>http://voles.github.io/blog/categories/es6/</loc>
+  </url>
+  <url>
+    <loc>http://voles.github.io/blog/categories/es2015/</loc>
+  </url>
+  <url>
+    <loc>http://voles.github.io/blog/categories/javascript/</loc>
+  </url>
+  <url>
+    <loc>http://voles.github.io/blog/categories/babel/</loc>
+  </url>
+  <url>
+    <loc>http://voles.github.io/blog/categories/experiments/</loc>
   </url>
 </urlset>

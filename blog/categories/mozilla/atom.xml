@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mozilla | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/mozilla/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-06T00:23:49+02:00</updated>
+  <updated>2015-07-08T19:56:07+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -20,7 +20,7 @@
     <id>http://voles.github.io/blog/2013/08/05/firefox-os-an-introduction</id>
     <content type="html"><![CDATA[<p>Today I was invited by <a href="https://twitter.com/remcoder">Remco</a> to join the <a href="https://plus.google.com/u/0/events/ctdip0rot71j36rrkkl4rkto1p0">Firefox OS event</a> at the <a href="http://q42.com/">Q42</a> office in Amsterdam. It was a great evening. With this blogpost, I’d like to share some of the things I’ve learned.</p>
 
-<p><img src="/images/posts/meetup-firefox-os.JPG"></p>
+<p>{% img /images/posts/meetup-firefox-os.JPG %}</p>
 
 <h1>Discussed topics</h1>
 
@@ -52,12 +52,14 @@
 
 <p>They brought some devices so we could play around with the OS and see for ourselves. In general, the attendees were quite suprised about how good Firefox OS runs!</p>
 
-<p><img src="/images/posts/meetup-firefox-os-testing.JPG"></p>
+<p>{% img /images/posts/meetup-firefox-os-testing.JPG %}</p>
 
 <h1>Standards</h1>
 
 <p>The people behind Mozilla also want to push the usage of standards. This was on one of the slides during the presentation:
-<blockquote><p>“Firefox OS application = website + W3C proposed phone APIs”</p></blockquote></p>
+{% blockquote %}
+“Firefox OS application = website + W3C proposed phone APIs”
+{% endblockquote %}</p>
 
 <p>That’s great!</p>
 
@@ -78,7 +80,7 @@ An example usecase for this would be to brighten up the screen when a user gets 
 
 <p>Note: take a look at this slide at the Q42 office!</p>
 
-<p><img src="/images/posts/meetup-firefox-os-slide.JPG"></p>
+<p>{% img /images/posts/meetup-firefox-os-slide.JPG %}</p>
 ]]></content>
   </entry>
   
