@@ -17,7 +17,7 @@ Because most of the new features aren't supported by all browsers, the ES6 code 
 
 The [repository on GitHub](https://github.com/Voles/es6-traceur-gulp) contains all source code, including documentation.
 
-I'll describe some of the new features I've tried and think are worth sharing.
+I'll describe some of the new features I've tried and think are worth to be shared.
 
 ## New String features
 
