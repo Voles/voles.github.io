@@ -4,7 +4,7 @@
   <title><![CDATA[Category: introduction | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/introduction/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-08T19:56:07+02:00</updated>
+  <updated>2015-07-09T16:13:54+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -40,23 +40,25 @@
 
 <p>Let&rsquo;s get started. First of all we install the right tools to set up an environment.</p>
 
-<p>{% codeblock lang:bash %}
-$ pip install virtualenv
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pip install virtualenv
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Next we create a new environment named &lsquo;my-environment&rsquo;, using the command <code>virtualenv</code>.</p>
 
-<p>{% codeblock lang:bash %}
-$ mkdir ~/Documents/environments/
-$ cd ~/Documents/environments/
-$ virtualenv my-environment &ndash;no-site-packages
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>mkdir ~/Documents/environments/
+</span><span class='line'><span class="nv">$ </span><span class="nb">cd</span> ~/Documents/environments/
+</span><span class='line'><span class="nv">$ </span>virtualenv my-environment <span class="p">&amp;</span>ndash<span class="p">;</span>no-site-packages
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Now we can create a link to it, so we don&rsquo;t have to type the full path everytime we want to use the environment.</p>
 
-<p>{% codeblock lang:bash %}
-$ ln -s ~/Documents/environments/my-environment/bin/python /usr/bin/my-environment
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>ln -s ~/Documents/environments/my-environment/bin/python /usr/bin/my-environment
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>When you execute <code>$ my-environment</code>, you can immediately start writing code. Let&rsquo;s print something to the Terminal with <code>print "Hello, World!"</code>. When you write <code>2 + 3</code>, you will get <code>5</code> as a result.</p>
 
@@ -69,91 +71,147 @@ Let&rsquo;s make a project for this environment.</p>
 
 <p>Go to the project folder and create a file named <code>math.py</code> with the following content.</p>
 
-<p>{% codeblock lang:python %}</p>
-
-<h1>-<em>- coding: utf-8 -</em>-</h1>
-
-<p>&lsquo;&rsquo;&lsquo;
-[2013] Niels Dequeker
- All Rights Reserved.
-&rsquo;&lsquo;&rsquo;</p>
-
-<p>class Math(object):</p>
-
-<pre><code>    def sum(self, a, b):
-            return a + b
-
-    def times(self, a, b):
-            return a * b
-
-    def divide(self, a, b):
-            return a / b
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;-&lt;</span><span class="n">em</span><span class="o">&gt;-</span> <span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="o">-</span><span class="mi">8</span> <span class="o">-&lt;/</span><span class="n">em</span><span class="o">&gt;-&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span>
+</span><span class='line'><span class="p">[</span><span class="mi">2013</span><span class="p">]</span> <span class="n">Niels</span> <span class="n">Dequeker</span>
+</span><span class='line'> <span class="n">All</span> <span class="n">Rights</span> <span class="n">Reserved</span><span class="o">.</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">class</span> <span class="nc">Math</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>    <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span class='line'>            <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">times</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span class='line'>            <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span class='line'>            <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>This is how we write a basic class in Python. It has three methods, <code>sum</code>, <code>times</code> and <code>divide</code>.</p>
 
 <p>Now we can write some unittests to validate our code. Create a file named <code>tests.py</code> with the following content.</p>
 
-<p>{% codeblock lang:python %}</p>
-
-<h1>-<em>- coding: utf-8 -</em>-</h1>
-
-<p>&lsquo;&rsquo;&lsquo;
-[2012] SocialExpress
- All Rights Reserved.
-&rsquo;&lsquo;&rsquo;
-import unittest
-from math import Math</p>
-
-<p>class Test(unittest.TestCase):</p>
-
-<pre><code>def test_sum(self):
-    math = Math()
-    self.assertTrue(math.sum(2, 3) == 5, 'Incorrect sum')
-
-def test_times(self):
-    math = Math()
-    self.assertTrue(math.times(2, 2) == 4, 'Incorrect times')
-
-def test_divide(self):
-    math = Math()
-    self.assertTrue(math.divide(12, 6) == 2, 'Incorrect division')
-</code></pre>
-
-<p>if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:
-    unittest.main()
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;-&lt;</span><span class="n">em</span><span class="o">&gt;-</span> <span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="o">-</span><span class="mi">8</span> <span class="o">-&lt;/</span><span class="n">em</span><span class="o">&gt;-&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span>
+</span><span class='line'><span class="p">[</span><span class="mi">2012</span><span class="p">]</span> <span class="n">SocialExpress</span>
+</span><span class='line'> <span class="n">All</span> <span class="n">Rights</span> <span class="n">Reserved</span><span class="o">.</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">unittest</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">Math</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">class</span> <span class="nc">Test</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">test_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">math</span> <span class="o">=</span> <span class="n">Math</span><span class="p">()</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&#39;Incorrect sum&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">test_times</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">math</span> <span class="o">=</span> <span class="n">Math</span><span class="p">()</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">times</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s">&#39;Incorrect times&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">test_divide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">math</span> <span class="o">=</span> <span class="n">Math</span><span class="p">()</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;Incorrect division&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">==</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">main</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;&amp;</span><span class="n">rdquo</span><span class="p">;:</span>
+</span><span class='line'>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Let&rsquo;s go through the code step by step.</p>
 
 <p>First of all we import our dependencies. <code>Math</code> is our own class that we&rsquo;ve created before.</p>
 
-<p>{% codeblock lang:python %}
-import unittest
-from math import Math
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">unittest</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">Math</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Next is the class definition for the test. It extends from <code>unittest.TestCase</code>.</p>
 
-<p>{% codeblock lang:python %}
-class Test(unittest.TestCase):
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">class</span> <span class="nc">Test</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Now what follows are the methods. Each one is testing one functionality of our <code>Math</code> class. We check the return values with <code>assertTrue</code> and get an exception when these aren&rsquo;t what we expected.</p>
 
-<p>{% codeblock lang:python %}
-def test_sum(self):
-        math = Math()
-        self.assertTrue(math.sum(2, 3) == 5, &lsquo;Incorrect sum&rsquo;)        {% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">test_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">math</span> <span class="o">=</span> <span class="n">Math</span><span class="p">()</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">Incorrect</span> <span class="nb">sum</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;)</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Finally, we define that if the <code>tests.py</code> file is executed directly, it has to execute our tests.</p>
 
-<p>{% codeblock lang:python %}
-if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:
-    unittest.main()
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">if</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">==</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">main</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;&amp;</span><span class="n">rdquo</span><span class="p">;:</span>
+</span><span class='line'>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>That&rsquo;s it. We can run our code in the Terminal with <code>$ my-environment tests.py</code>. You should see <code>Ran 3 tests</code>, which mean your code works as expected.</p>
 

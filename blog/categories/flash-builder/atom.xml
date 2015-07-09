@@ -4,7 +4,7 @@
   <title><![CDATA[Category: flash builder | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/flash-builder/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-08T19:56:07+02:00</updated>
+  <updated>2015-07-09T16:13:54+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -24,11 +24,11 @@
 
 <p>You will see a dialog where you can fill in your project details. Fill in your <em>Project name</em> and press the <em>Next</em> button.</p>
 
-<p>{% img /images/posts/project-name.png &lsquo;Project name&rsquo; %}</p>
+<p><img src="/images/posts/project-name.png" title="&lsquo;Project name&rsquo;" ></p>
 
 <p>Change the <em>Main application file</em> to <em>Main.as</em>, this is just a convention. Press finish to complete your project setup.</p>
 
-<p>{% img /images/posts/main-application-file.png &lsquo;Main application file&rsquo; %}</p>
+<p><img src="/images/posts/main-application-file.png" title="&lsquo;Main application file&rsquo;" ></p>
 
 <h2>Flash Library</h2>
 
@@ -38,13 +38,13 @@
 
 <p>Tick <em>Export for ActionScript</em> and change the classname (‘Class’) to &lsquo;SimpleShape’. You schould have something like this:</p>
 
-<p>{% img /images/posts/mc-properties.png &lsquo;MovieClip properties&rsquo; %}</p>
+<p><img src="/images/posts/mc-properties.png" title="&lsquo;MovieClip properties&rsquo;" ></p>
 
 <p>Because we want to use the library of this .fla-file with Flash Builder, we have to make a .swc-file. You can learn more about .swc-files in this <a href="http://stackoverflow.com/questions/1340866/what-is-a-flash-swc-file-and-how-is-it-used" title="Stackoverflow question, what is swc and how is it used">Stackoverflow question</a>.</p>
 
 <p>To let your .fla-file generate a .swc-file, go to <em>File</em> <strong>→</strong> <em>Publish Settings</em>. Next, go to the <em>Flash</em>-tab and thick <em>Export SWC</em>.</p>
 
-<p>{% img /images/posts/publish-settings.png &lsquo;Publish settings&rsquo; %}</p>
+<p><img src="/images/posts/publish-settings.png" title="&lsquo;Publish settings&rsquo;" ></p>
 
 <p>Press the <em>OK</em>-button. Every time you change something in your .swf-file, you will have to publish your .swc-file again to make sure it contains the latest updates of your library. You can generate a .swc-file with the shortcut <em>command + return</em>.</p>
 
@@ -52,17 +52,17 @@
 
 <p>Go back to Flash Builder and make a new folder named ‘libs’ in your project. Here you can put all your resources for the project. The structure of your project should look like this:</p>
 
-<p>{% img /images/posts/project-structure.png &lsquo;Project structure&rsquo; %}</p>
+<p><img src="/images/posts/project-structure.png" title="&lsquo;Project structure&rsquo;" ></p>
 
 <p>Go back to the Flash IDE and save your .fla-file in the folder <em>libs</em> you have just created in your Flash Builder project. The location of your project depends on your workspace in Flash Builder.</p>
 
 <p>Save the .fla-file as <em>library.fla</em> and again create a .swc-file (<em>command + return</em>). Go back to Flash Builder and your project structure now should look like this:</p>
 
-<p>{% img /images/posts/libs-folder.png &lsquo;Libs folder&rsquo; %}</p>
+<p><img src="/images/posts/libs-folder.png" title="&lsquo;Libs folder&rsquo;" ></p>
 
 <p>Now we must let the project know that he can use the .swc-files in the <em>libs</em>-folder. Right-click on the name of the project, go to <em>Properties</em>. Go to the <em>ActionScript Build Path</em>-tab and then to the <em>Library path</em>-view. Click <em>Add SWC Folder</em> and select your <em>libs</em>-folder. You should see this:</p>
 
-<p>{% img /images/posts/build-path.png &lsquo;Actionscript build path&rsquo; %}</p>
+<p><img src="/images/posts/build-path.png" title="&lsquo;Actionscript build path&rsquo;" ></p>
 
 <p>Now your .swc-file is linked with your Flash Builder project, click <em>Ok</em>.</p>
 
@@ -72,43 +72,71 @@
 
 <p>In the constructor of your Main.as, add these lines of code:</p>
 
-<p>{% codeblock lang:as3 %}
-// stage
-stage.scaleMode = StageScaleMode.NO_SCALE;
-stage.align = StageAlign.TOP_LEFT;</p>
-
-<p>if (loaderInfo.bytesLoaded > loaderInfo.bytesTotal)
-{
-    // swf is already loaded
-    preloaderCompleteHandler(null);
-}
-else
-{
-    // preloader methods
-    loaderInfo.addEventListener(Event.COMPLETE, preloaderCompleteHandler);
-    loaderInfo.addEventListener(ProgressEvent.PROGRESS, preloaderProgressHandler);
-}
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="c1">// stage</span>
+</span><span class='line'><span class="n">stage</span><span class="o">.</span><span class="na">scaleMode</span> <span class="o">=</span> <span class="n">StageScaleMode</span><span class="o">.</span><span class="na">NO_SCALE</span><span class="o">;</span>
+</span><span class='line'><span class="n">stage</span><span class="o">.</span><span class="na">align</span> <span class="o">=</span> <span class="n">StageAlign</span><span class="o">.</span><span class="na">TOP_LEFT</span><span class="o">;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">(</span><span class="n">loaderInfo</span><span class="o">.</span><span class="na">bytesLoaded</span> <span class="o">&gt;</span> <span class="n">loaderInfo</span><span class="o">.</span><span class="na">bytesTotal</span><span class="o">)</span>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>    <span class="c1">// swf is already loaded</span>
+</span><span class='line'>    <span class="n">preloaderCompleteHandler</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>    <span class="c1">// preloader methods</span>
+</span><span class='line'>    <span class="n">loaderInfo</span><span class="o">.</span><span class="na">addEventListener</span><span class="o">(</span><span class="n">Event</span><span class="o">.</span><span class="na">COMPLETE</span><span class="o">,</span> <span class="n">preloaderCompleteHandler</span><span class="o">);</span>
+</span><span class='line'>    <span class="n">loaderInfo</span><span class="o">.</span><span class="na">addEventListener</span><span class="o">(</span><span class="n">ProgressEvent</span><span class="o">.</span><span class="na">PROGRESS</span><span class="o">,</span> <span class="n">preloaderProgressHandler</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>We look at the loaderInfo of the SWF tho check if all data is loaded. If not, we add two eventlisteners to the loaderInfo. Next, add these functions to the Main-class:</p>
 
-<p>{% codeblock lang:as3 %}
-/<em>*
- * Preloader progress
- </em>/
-private function preloaderProgressHandler(event:ProgressEvent):void
-{
-    trace(&ldquo;Preloader progress: &rdquo; + Math.round((event.bytesLoaded / event.bytesTotal) * 100) + &ldquo;%&rdquo;);
-}</p>
-
-<p>/<em>*
- * Preloader complete
- </em>/
-private function preloaderCompleteHandler(event:Event):void
-{</p>
-
-<p>}
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="o">/&lt;</span><span class="n">em</span><span class="o">&gt;*</span>
+</span><span class='line'> <span class="o">*</span> <span class="n">Preloader</span> <span class="n">progress</span>
+</span><span class='line'> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;/</span>
+</span><span class='line'><span class="kd">private</span> <span class="kd">function </span><span class="nf">preloaderProgressHandler</span><span class="o">(</span><span class="n">event</span><span class="o">:</span><span class="kt">ProgressEvent</span><span class="o">):</span><span class="kt">void</span>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>    <span class="nf">trace</span><span class="o">(&amp;</span><span class="n">ldquo</span><span class="o">;</span><span class="n">Preloader</span> <span class="n">progress</span><span class="o">:</span> <span class="o">&amp;</span><span class="n">rdquo</span><span class="o">;</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="na">round</span><span class="o">((</span><span class="n">event</span><span class="o">.</span><span class="na">bytesLoaded</span> <span class="o">/</span> <span class="n">event</span><span class="o">.</span><span class="na">bytesTotal</span><span class="o">)</span> <span class="o">*</span> <span class="mi">100</span><span class="o">)</span> <span class="o">+</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="o">;%&amp;</span><span class="n">rdquo</span><span class="o">;);</span>
+</span><span class='line'><span class="o">}&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;/&lt;</span><span class="n">em</span><span class="o">&gt;*</span>
+</span><span class='line'> <span class="o">*</span> <span class="n">Preloader</span> <span class="n">complete</span>
+</span><span class='line'> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;/</span>
+</span><span class='line'><span class="kd">private</span> <span class="kd">function </span><span class="nf">preloaderCompleteHandler</span><span class="o">(</span><span class="n">event</span><span class="o">:</span><span class="kt">Event</span><span class="o">):</span><span class="kt">void</span>
+</span><span class='line'><span class="o">{&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;}</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>The progress-function contains some simple math to trace the progress of the preloader. You can also use this value so visualise the progress.</p>
 
@@ -122,23 +150,31 @@ private function preloaderCompleteHandler(event:Event):void
 
 <p>Again, right click on your Flash Builder project and go to ‘Properties’. In the ‘ActionScript Compiler’-tab, put this in the ‘Additional compiler arguments’: “-frame &ldquo;start&rdquo; be.devine.Application”. This creates a second frame for your project. You should have this:</p>
 
-<p>{% img /images/posts/compiler-arguments.png &lsquo;Additional compiler arguments&rsquo; %}</p>
+<p><img src="/images/posts/compiler-arguments.png" title="&lsquo;Additional compiler arguments&rsquo;" ></p>
 
 <p>Go to your Main.as class and change the superclass to ‘MovieClip’ instead of Sprite. You have to do this because we want multiple frames (one frame for the preloader and a second frame for the application itself) and a Sprite doesn’t have a timeline.</p>
 
 <p>The last thing we have to write is the preloaderCompleteHandler. Add these lines to the function:</p>
 
-<p>{% codeblock lang:as3 %}
-// go to second frame
-gotoAndStop(&ldquo;start&rdquo;);</p>
-
-<p>// application classname
-var applicationClass:* = getDefinitionByName(&ldquo;be.devine.Application&rdquo;);</p>
-
-<p>// make the application
-var application:* = new applicationClass();
-addChild(application);
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="c1">// go to second frame</span>
+</span><span class='line'><span class="n">gotoAndStop</span><span class="o">(&amp;</span><span class="n">ldquo</span><span class="o">;</span><span class="n">start</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="o">;);&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;//</span> <span class="n">application</span> <span class="n">classname</span>
+</span><span class='line'><span class="n">var</span> <span class="n">applicationClass</span><span class="o">:*</span> <span class="o">=</span> <span class="n">getDefinitionByName</span><span class="o">(&amp;</span><span class="n">ldquo</span><span class="o">;</span><span class="n">be</span><span class="o">.</span><span class="na">devine</span><span class="o">.</span><span class="na">Application</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="o">;);&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;//</span> <span class="n">make</span> <span class="n">the</span> <span class="n">application</span>
+</span><span class='line'><span class="n">var</span> <span class="n">application</span><span class="o">:*</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">applicationClass</span><span class="o">();</span>
+</span><span class='line'><span class="n">addChild</span><span class="o">(</span><span class="n">application</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>You see I’ve used the asterisk, this is used like a ‘joker’. So the ‘application’ variable can be any class, but is doesn’t make a explicit reference to the Application-class. This makes sure the that the SWF will not wait until the Application-class is loaded before showing up the preloader.</p>
 

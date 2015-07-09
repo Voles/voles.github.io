@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Exploring ECMAScript 6 - Niels Dequeker</title>
+  <meta name="author" content="Niels Dequeker">
+
+  
+  <meta name="description" content="On July 2nd, ECMA published a press release announcing ECMAScript&reg; 2015. I’ve been experimenting with some of the new features of the language. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://voles.github.io/blog/2015/07/08/exploring-es6/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Niels Dequeker" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26231173-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Niels Dequeker</a></h1>
+  
+    <h2>When I read what I write I learn what I think</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="voles.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/vim-cheat-sheet">My Vim cheat sheet</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Exploring ECMAScript 6</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-07-08T19:44:05+02:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>7:44 pm</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://voles.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>On July 2nd, ECMA published a press release <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">announcing ECMAScript&reg; 2015</a>. I’ve been experimenting with some of the new features of the language.</p>
+
+<p>Because most of the new features aren&rsquo;t supported by all browsers, the ES6 code must be transpiled to ES5 compatible code. There are a couple of tools out there which can do the job.</p>
+
+<p><strong>My setup consists of:</strong></p>
+
+<ul>
+<li><a href="https://github.com/google/traceur-compiler">Traceur</a> &mdash; to compile the ES6 code to ES5 code</li>
+<li><a href="http://gulpjs.com/">Gulp</a> &mdash; to run the webserver and trigger the compile task</li>
+</ul>
+
+
+<p>The <a href="https://github.com/Voles/es6-traceur-gulp">repository on GitHub</a> contains all source code, including documentation.</p>
+
+<p>I&rsquo;ll describe some of the new features I&rsquo;ve tried and think are worth sharing.</p>
+
+<h2>New String features</h2>
+
+<h3>Methods</h3>
+
+<p>New methods like <code>startsWith()</code> and <code>includes()</code> feel much more natural to work with strings.
+They are  more readable than doing the same checks using <code>indexOf()</code> in ES5.</p>
+
+<p>Note that these methods are case sensitive, as <a href="https://github.com/Voles/es6-traceur-gulp/blob/master/app/main.js#L12">I found out while experimenting</a>.</p>
+
+<h3>Multiline strings</h3>
+
+<p>It is now possible to use multiline strings, without having to concatenate each line.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="err">`</span><span class="nx">This</span> <span class="nx">is</span>
+</span><span class='line'><span class="nx">valid</span> <span class="nx">ES2015</span><span class="err">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h3>String interpolation</h3>
+
+<p>Instead of concatenating strings and variables, code can now be more readable using string interpolation. Note that the backticks are required here.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">theAnswer</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+</span><span class='line'><span class="err">`</span><span class="nx">The</span> <span class="nx">answer</span> <span class="nx">is</span> <span class="nx">$</span><span class="p">{</span><span class="nx">theAnswer</span><span class="p">}</span><span class="err">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Functions</h2>
+
+<h3>Named parameters</h3>
+
+<p>Functions can take named parameters using ES6, which can have default values.
+When you execute the <code>doGreeting()</code> function below without passing a value, it’s default output will be <code>Hi!</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">doGreeting</span><span class="p">(</span><span class="nx">greeting</span> <span class="o">=</span> <span class="err">‘</span><span class="nx">Hi</span><span class="o">!</span><span class="err">’</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Arrow functions</h3>
+
+<p>This is basically a new syntax to write functions, with a <a href="https://leanpub.com/understandinges6/read/#leanpub-auto-arrow-functions">few differences</a>. The example code below defines the function <code>sayIt()</code>, which takes one parameter, <code>it</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">sayIt</span> <span class="o">=</span> <span class="nx">it</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">it</span><span class="p">);</span>
+</span><span class='line'><span class="nx">sayIt</span><span class="p">(</span><span class="s1">&#39;Yo&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Generators</h3>
+
+<p>I’ve worked with Python before, where terms as list comprehension and generators are commonly used.
+Good news, generators are now part of ECMAScript 6!</p>
+
+<p>A simple example is the generator <code>alphabetGenerator()</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="o">*</span><span class="nx">alphabetGenerator</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">yield</span> <span class="s1">&#39;A&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">yield</span> <span class="s1">&#39;B&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">yield</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>A working example can be found on line 53 of my <a href="https://github.com/Voles/es6-traceur-gulp/blob/master/app/main.js#L53">ES6 experiments</a>.</p>
+
+<h2>Deploying ES6 code</h2>
+
+<p>The code generated by Traceur depends on a small runtime library containing Javascript code for things like creating classes, handling spread arguments, etc.</p>
+
+<p>There is not yet a &lsquo;One Size Fits All&rsquo; solution to compile all code during the build process.
+Dr. Axel Rauschmayer has written a great overview on <a href="http://www.2ality.com/2015/04/deploying-es6.html">how to deploy ECMAScript 6 code</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Niels Dequeker</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-07-08T19:44:05+02:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>7:44 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/babel/'>babel</a>, <a class='category' href='/blog/categories/es2015/'>es2015</a>, <a class='category' href='/blog/categories/es6/'>es6</a>, <a class='category' href='/blog/categories/experiments/'>experiments</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://voles.github.io/blog/2015/07/08/exploring-es6/" data-via="ndequeker" data-counturl="http://voles.github.io/blog/2015/07/08/exploring-es6/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/08/05/firefox-os-an-introduction/" title="Previous Post: Firefox OS: an introduction">&laquo; Firefox OS: an introduction</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/08/exploring-es6/">Exploring ECMAScript 6</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/05/firefox-os-an-introduction/">Firefox OS: An Introduction</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/09/the-first-javascript-mvc-meetup/">The First JavaScript MVC Meetup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/25/favourite-mac-utilities/">My Favourite Mac Utilities</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/20/getting-started-with-python/">Getting Started With Python</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Niels Dequeker -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'voles';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://voles.github.io/blog/2015/07/08/exploring-es6/';
+        var disqus_url = 'http://voles.github.io/blog/2015/07/08/exploring-es6/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

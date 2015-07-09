@@ -4,7 +4,7 @@
   <title><![CDATA[Category: drag and drop | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/drag-and-drop/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-08T19:56:07+02:00</updated>
+  <updated>2015-07-09T16:13:54+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -22,24 +22,25 @@
 
 <p>At first, you have to add two event listeners to the component, <code>NATIVE_DRAG_ENTER</code> and <code>NATIVE_DRAG_DROP</code>. Both of them are <code>NativeDragEvents</code>.</p>
 
-<p>{% codeblock lang:as3 %}
-addEventListener(NativeDragEvents. NATIVE_DRAG_ENTER, nativedragenterHandler);
-addEventListener(NativeDragEvents. NATIVE_DRAG_DROP, nativedragdropHandler);
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="n">addEventListener</span><span class="o">(</span><span class="n">NativeDragEvents</span><span class="o">.</span> <span class="n">NATIVE_DRAG_ENTER</span><span class="o">,</span> <span class="n">nativedragenterHandler</span><span class="o">);</span>
+</span><span class='line'><span class="n">addEventListener</span><span class="o">(</span><span class="n">NativeDragEvents</span><span class="o">.</span> <span class="n">NATIVE_DRAG_DROP</span><span class="o">,</span> <span class="n">nativedragdropHandler</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>The <code>nativedragenterHandler</code> will be triggered whenever a user hovers the component with one or more files selected. The <code>nativedragdropHandler</code> will be triggered when the user ‘drops’ his files on this component.</p>
 
 <p>Put this code in the <code>nativedragenterHandler</code>, to let the component accept a user to drop his files here.</p>
 
-<p>{% codeblock lang:as3 %}
-DragManager.acceptDragDrop(this);
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="n">DragManager</span><span class="o">.</span><span class="na">acceptDragDrop</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Everything else happens in the <code>nativedragdropHandler</code>. The code below shows you how to fetch the dropped files, so you can work with them in the application.</p>
 
-<p>{% codeblock lang:as3 %}
-var droppedFiles:Array = event.clipboard.getData(ClipboardFormats.FILE_LIST_FORMAT) as Array;
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='as3'><span class='line'><span class="kd">var</span> <span class="n">droppedFiles</span><span class="p">:</span><span class="kt">Array</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="na">clipboard</span><span class="o">.</span><span class="na">getData</span><span class="o">(</span><span class="n">ClipboardFormats</span><span class="o">.</span><span class="na">FILE_LIST_FORMAT</span><span class="o">)</span> <span class="k">as</span> <span class="n">Array</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure></p>
 ]]></content>
   </entry>
   

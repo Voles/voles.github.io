@@ -4,7 +4,7 @@
   <title><![CDATA[Niels Dequeker]]></title>
   <link href="http://voles.github.io/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-08T19:45:47+02:00</updated>
+  <updated>2015-07-09T16:13:54+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -12,6 +12,118 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Exploring ECMAScript 6]]></title>
+    <link href="http://voles.github.io/blog/2015/07/08/exploring-es6/"/>
+    <updated>2015-07-08T19:44:05+02:00</updated>
+    <id>http://voles.github.io/blog/2015/07/08/exploring-es6</id>
+    <content type="html"><![CDATA[<p>On July 2nd, ECMA published a press release <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">announcing ECMAScript&reg; 2015</a>. I’ve been experimenting with some of the new features of the language.</p>
+
+<p>Because most of the new features aren&rsquo;t supported by all browsers, the ES6 code must be transpiled to ES5 compatible code. There are a couple of tools out there which can do the job.</p>
+
+<p><strong>My setup consists of:</strong></p>
+
+<ul>
+<li><a href="https://github.com/google/traceur-compiler">Traceur</a> &mdash; to compile the ES6 code to ES5 code</li>
+<li><a href="http://gulpjs.com/">Gulp</a> &mdash; to run the webserver and trigger the compile task</li>
+</ul>
+
+
+<p>The <a href="https://github.com/Voles/es6-traceur-gulp">repository on GitHub</a> contains all source code, including documentation.</p>
+
+<p>I&rsquo;ll describe some of the new features I&rsquo;ve tried and think are worth sharing.</p>
+
+<h2>New String features</h2>
+
+<h3>Methods</h3>
+
+<p>New methods like <code>startsWith()</code> and <code>includes()</code> feel much more natural to work with strings.
+They are  more readable than doing the same checks using <code>indexOf()</code> in ES5.</p>
+
+<p>Note that these methods are case sensitive, as <a href="https://github.com/Voles/es6-traceur-gulp/blob/master/app/main.js#L12">I found out while experimenting</a>.</p>
+
+<h3>Multiline strings</h3>
+
+<p>It is now possible to use multiline strings, without having to concatenate each line.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="err">`</span><span class="nx">This</span> <span class="nx">is</span>
+</span><span class='line'><span class="nx">valid</span> <span class="nx">ES2015</span><span class="err">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h3>String interpolation</h3>
+
+<p>Instead of concatenating strings and variables, code can now be more readable using string interpolation. Note that the backticks are required here.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">theAnswer</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+</span><span class='line'><span class="err">`</span><span class="nx">The</span> <span class="nx">answer</span> <span class="nx">is</span> <span class="nx">$</span><span class="p">{</span><span class="nx">theAnswer</span><span class="p">}</span><span class="err">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Functions</h2>
+
+<h3>Named parameters</h3>
+
+<p>Functions can take named parameters using ES6, which can have default values.
+When you execute the <code>doGreeting()</code> function below without passing a value, it’s default output will be <code>Hi!</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">doGreeting</span><span class="p">(</span><span class="nx">greeting</span> <span class="o">=</span> <span class="err">‘</span><span class="nx">Hi</span><span class="o">!</span><span class="err">’</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Arrow functions</h3>
+
+<p>This is basically a new syntax to write functions, with a <a href="https://leanpub.com/understandinges6/read/#leanpub-auto-arrow-functions">few differences</a>. The example code below defines the function <code>sayIt()</code>, which takes one parameter, <code>it</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">sayIt</span> <span class="o">=</span> <span class="nx">it</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">it</span><span class="p">);</span>
+</span><span class='line'><span class="nx">sayIt</span><span class="p">(</span><span class="s1">&#39;Yo&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Generators</h3>
+
+<p>I’ve worked with Python before, where terms as list comprehension and generators are commonly used.
+Good news, generators are now part of ECMAScript 6!</p>
+
+<p>A simple example is the generator <code>alphabetGenerator()</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="o">*</span><span class="nx">alphabetGenerator</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">yield</span> <span class="s1">&#39;A&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">yield</span> <span class="s1">&#39;B&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">yield</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>A working example can be found on line 53 of my <a href="https://github.com/Voles/es6-traceur-gulp/blob/master/app/main.js#L53">ES6 experiments</a>.</p>
+
+<h2>Deploying ES6 code</h2>
+
+<p>The code generated by Traceur depends on a small runtime library containing Javascript code for things like creating classes, handling spread arguments, etc.</p>
+
+<p>There is not yet a &lsquo;One Size Fits All&rsquo; solution to compile all code during the build process.
+Dr. Axel Rauschmayer has written a great overview on <a href="http://www.2ality.com/2015/04/deploying-es6.html">how to deploy ECMAScript 6 code</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Firefox OS: An Introduction]]></title>

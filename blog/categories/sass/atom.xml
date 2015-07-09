@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sass | Niels Dequeker]]></title>
   <link href="http://voles.github.io/blog/categories/sass/atom.xml" rel="self"/>
   <link href="http://voles.github.io/"/>
-  <updated>2015-07-08T19:56:07+02:00</updated>
+  <updated>2015-07-09T16:13:54+02:00</updated>
   <id>http://voles.github.io/</id>
   <author>
     <name><![CDATA[Niels Dequeker]]></name>
@@ -42,11 +42,13 @@
 
 <p>To use Sass first create two new folders <code>css</code> and <code>sass</code>. In the same directory, create a file named <code>config.rb</code>. Add these lines to the file:</p>
 
-<p>{% codeblock lang:ruby %}
-css_dir = &ldquo;css&rdquo;
-sass_dir = &ldquo;sass&rdquo;
-output_style = :compressed
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">css_dir</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">css</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'><span class="n">sass_dir</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">sass</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'><span class="n">output_style</span> <span class="o">=</span> <span class="ss">:compressed</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>The first line refers to the directory were your final CSS-file will be compiled to. The second line tells where your .scss-files are stored.</p>
 
@@ -56,10 +58,10 @@ output_style = :compressed
 
 <p>Now we first have to install Sass and Compass. Type these two commands in the Terminal, to install both Ruby Gems.</p>
 
-<p>{% codeblock %}
-$ sudo gem install haml
-$ sudo gem install compass
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo gem install haml
+</span><span class='line'>$ sudo gem install compass</span></code></pre></td></tr></table></div></figure></p>
 
 <p>To compile the file, we&rsquo;ll use Terminal. Go to the folder <code>sass</code> we have just created. To change the current directory, type the command <code>cd</code> and then   the path you want to go to. E.g. <code>cd /Applications/MAMP/htdocs/my-first-sass-project</code>.</p>
 
@@ -79,57 +81,92 @@ You can declare variables and use them everywhere in your .scss-file. This can c
 <p><strong>Nesting</strong><br/>
 You can write much cleaner CSS-code with nesting.</p>
 
-<p>{% codeblock lang:css %}
-ul.message {
-  li.warning {
-    color: yellow;
-  }</p>
-
-<p>  li.error {
-    color: red;
-  }</p>
-
-<p>  li.success {
-    color: green;
-  }
-}
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">ul</span><span class="nc">.message</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">li</span><span class="o">.</span><span class="n">warning</span> <span class="err">{</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="nb">yellow</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span>  <span class="nt">li</span><span class="nc">.error</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span>  <span class="nt">li</span><span class="nc">.success</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="nb">green</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p><strong>Mixins</strong><br/>
 Mixins are like functions. You can pass some parameters and it gives you the result you want.
-{% codeblock lang:css %}
-@makebox ($background, $border, $width) {
-  background: $background;
-  border: 1px solid $border;
-  width: $width;
-}</p>
-
-<h1>boxA {</h1>
-
-<p>  @include makebox(#FF0000, #000000, 150);
-}</p>
-
-<h1>boxB {</h1>
-
-<p>  @include makebox(#00FF00, #CCCCCC, 375);
-}
-{% endcodeblock %}</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="k">@makebox</span> <span class="o">(</span><span class="err">$</span><span class="nt">background</span><span class="o">,</span> <span class="err">$</span><span class="nt">border</span><span class="o">,</span> <span class="err">$</span><span class="nt">width</span><span class="o">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nt">background</span><span class="o">:</span> <span class="err">$</span><span class="nt">background</span><span class="o">;</span>
+</span><span class='line'>  <span class="nt">border</span><span class="o">:</span> <span class="nt">1px</span> <span class="nt">solid</span> <span class="err">$</span><span class="nt">border</span><span class="o">;</span>
+</span><span class='line'>  <span class="nt">width</span><span class="o">:</span> <span class="err">$</span><span class="nt">width</span><span class="o">;</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">h1</span><span class="o">&gt;</span><span class="nt">boxA</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="o">@</span><span class="n">include</span> <span class="n">makebox</span><span class="p">(</span><span class="m">#FF0000</span><span class="o">,</span> <span class="m">#000000</span><span class="o">,</span> <span class="m">150</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">h1</span><span class="o">&gt;</span><span class="nt">boxB</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="o">@</span><span class="n">include</span> <span class="n">makebox</span><span class="p">(</span><span class="m">#00FF00</span><span class="o">,</span> <span class="m">#CCCCCC</span><span class="o">,</span> <span class="m">375</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p><strong>Inheritance</strong><br/>
 It is possible to extend selectors from other selectors.</p>
 
-<p>{% codeblock lang:css %}
-.blue {
-  background: #0000FF;
-  border: 10px dashed #0000FF;
-}</p>
-
-<h1>box {</h1>
-
-<p>  @extend .blue;
-  width: 160px;
-}
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.blue</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">background</span><span class="o">:</span> <span class="m">#0000FF</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border</span><span class="o">:</span> <span class="m">10px</span> <span class="k">dashed</span> <span class="m">#0000FF</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">h1</span><span class="o">&gt;</span><span class="nt">box</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="o">@</span><span class="n">extend</span> <span class="o">.</span><span class="nb">blue</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">width</span><span class="o">:</span> <span class="m">160px</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>If you like what you see, be sure to take a look at these resources to learn Sass. The most complicated part is installing / compiling the files. Most other things speak for themselves.</p>
 
