@@ -6,13 +6,13 @@ comments: true
 categories: [es6, es2015, javascript, babel, experiments]
 ---
 
-On July 2nd, ECMA published the press release [announcing ECMAScript&reg; 2015](http://www.ecma-international.org/publications/standards/Ecma-262.htm). I’ve been experimenting with some of the new features of the language.
+On July 2nd, ECMA published a press release [announcing ECMAScript&reg; 2015](http://www.ecma-international.org/publications/standards/Ecma-262.htm). I’ve been experimenting with some of the new features of the language.
 
-Because most of the new featured aren't supported by most browsers, the ES6 code must be transpiled to ES5 compatible code. There are a couple of tools out there which can do the job. 
+Because most of the new features aren't supported by all browsers, the ES6 code must be transpiled to ES5 compatible code. There are a couple of tools out there which can do the job. 
 
 **My setup consists of:**
 
-- [Traceur](https://github.com/google/traceur-compiler) &mdash; to compile the ES26 code to ES5 code
+- [Traceur](https://github.com/google/traceur-compiler) &mdash; to compile the ES6 code to ES5 code
 - [Gulp](http://gulpjs.com/) &mdash; to run the webserver and trigger the compile task
 
 The [repository on GitHub](https://github.com/Voles/es6-traceur-gulp) contains all source code, including documentation.
@@ -22,8 +22,8 @@ I'll describe some of the new features I've tried and think are worth sharing.
 ## New String features
 
 ### Methods
-New methods like `startsWith()` and `includes()` provide a much more natural to work with strings.
-They are  more readable than doing the same checks using `indexOf()`.
+New methods like `startsWith()` and `includes()` feel much more natural to work with strings.
+They are  more readable than doing the same checks using `indexOf()` in ES5.
 
 Note that these methods are case sensitive, as [I found out while experimenting](https://github.com/Voles/es6-traceur-gulp/blob/master/app/main.js#L12).
 
@@ -35,7 +35,7 @@ valid ES2015`
 {% endcodeblock %} 
 
 ### String interpolation
-Instead of concatenating strings and variables, code can be more readable using string interpolation. Note that the backticks are required here.
+Instead of concatenating strings and variables, code can now be more readable using string interpolation. Note that the backticks are required here.
 
 {% codeblock lang:js %}var theAnswer = 42;
 `The answer is ${theAnswer}`
@@ -44,7 +44,7 @@ Instead of concatenating strings and variables, code can be more readable using 
 ## Functions
 
 ### Named parameters
-Functions can now take named parameters, which can have default values.
+Functions can take named parameters using ES6, which can have default values.
 When you execute the `doGreeting()` function below without passing a value, it’s default output will be `Hi!`
 
 {% codeblock lang:js %}
@@ -54,29 +54,28 @@ function doGreeting(greeting = ‘Hi!’) {
 {% endcodeblock %}
 
 ### Arrow functions
-It’s now also possible to use *Arrow Functions*. This is basically a new syntax to write functions, with a [few differences](https://leanpub.com/understandinges6/read/#leanpub-auto-arrow-functions).
-
-The example code below defines function `sayIt`, which takes one parameter `it`.
+This is basically a new syntax to write functions, with a [few differences](https://leanpub.com/understandinges6/read/#leanpub-auto-arrow-functions). The example code below defines the function `sayIt()`, which takes one parameter, `it`.
 
 {% codeblock lang:js %}
 var sayIt = it => console.log(it);
 sayIt('Yo');
 {% endcodeblock %}
 
+### Generators
 I’ve worked with Python before, where terms as list comprehension and generators are commonly used.
 Good news, generators are now part of ECMAScript 6!
 
-A simple example is the `alphabetGenerator()`.
+A simple example is the generator `alphabetGenerator()`.
 
 {% codeblock lang:js %}
 function *alphabetGenerator() {
     yield 'A';
-      yield 'B';
-        yield 'C';
+    yield 'B';
+    yield 'C';
 }
 {% endcodeblock %}
 
-A working example can be found on line 54 of my [ES6 experiments](https://github.com/Voles/es6-traceur-gulp/blob/master/app/main.js#L54).
+A working example can be found on line 53 of my [ES6 experiments](https://github.com/Voles/es6-traceur-gulp/blob/master/app/main.js#L53).
 
 ## Deploying ES6 code
 
