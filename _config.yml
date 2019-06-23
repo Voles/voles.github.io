@@ -6,7 +6,7 @@ url: blog.nielsdequeker.be
 title: Niels Dequeker
 subtitle: When I read what I write I learn what I think
 author: Niels Dequeker
-simple_search: http://google.com/search
+simple_search: https://google.com/search
 description: I'm a Creative Developer who loves creating stuff. Dabbling with new programming languages, exploring the limits and never stop learning.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
